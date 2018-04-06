@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchData } from '../../Api/ApiCalls/fetchData';
+import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import CardContainer from '../CardContainer/CardContainer';
 import * as Actions from '../../Actions';
 import './App.css';
@@ -8,7 +8,8 @@ import './App.css';
 class App extends Component {
 
   async componentDidMount() {
-    const recipes = await fetchData();
+    const recipes = await fetchRandomRecipes();
+    console.log('final in app', recipes);
     this.props.postRecipes(recipes);
   }
 

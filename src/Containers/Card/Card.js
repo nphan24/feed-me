@@ -8,7 +8,7 @@ export const Card = (card) => {
     <div className='recipe-card'>
       <p>{name}</p>
       <img src={image}/>
-      <p>Total time: {totalTime} mins</p>
+      <p>Total cook time: {totalTime} mins</p>
     </div>
   );
 };
