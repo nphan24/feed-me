@@ -9,7 +9,6 @@ class App extends Component {
 
   async componentDidMount() {
     const recipes = await fetchRandomRecipes();
-    console.log('final in app', recipes);
     this.props.postRecipes(recipes);
   }
 

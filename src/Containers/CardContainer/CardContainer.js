@@ -4,7 +4,6 @@ import { Card } from '../Card/Card';
 import './CardContainer.css';
 
 export const CardContainer = props => {
-  console.log('props', props.recipes);
   let renderCards;
 
   if (props.recipes) {
@@ -16,6 +15,7 @@ export const CardContainer = props => {
           totalTime={recipe.totaltime}
           id={recipe.id}
           ingredients={recipe.ingredients}
+          source={recipe.source}
         />
       );
     });
