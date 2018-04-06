@@ -4,7 +4,7 @@ export const cleanRecipes = mealsArray => {
     
     return { 
       name: recipeName, 
-      image: imageUrlsBySize,
+      image: imageUrlsBySize['90'],
       Ingredients: ingredients, 
       totaltime: totalTimeInSeconds / 60, 
       id: id };
