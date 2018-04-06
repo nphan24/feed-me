@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchData } from './Api/ApiCalls/fetchData';
+import {cleanRecipes} from './Api/helper/cleanRecipes';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,7 +8,8 @@ class App extends Component {
 
   async componentDidMount() {
     const mealData = await fetchData();
-    console.log('meal data', mealData);
+    const recipes = await cleanRecipes(mealData);
+    console.log ('recipes', recipes);
   }
 
   render() {
@@ -21,5 +23,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
