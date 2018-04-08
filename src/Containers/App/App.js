@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import CardContainer from '../CardContainer/CardContainer';
 import * as Actions from '../../Actions';
+import { Route, NavLink, withRouter } from 'react-router-dom';
 import './App.css';
 
-class App extends Component {
-
+export class App extends Component {
   async componentDidMount() {
     const recipes = await fetchRandomRecipes();
     this.props.postRecipes(recipes);
@@ -17,6 +17,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">My Husband Should Cook This To Feed-Me</h1>
+          <NavLink className='view-favorites-button' to='/favorites'>View Favorites</NavLink>
         </header>
         <CardContainer />
       </div>

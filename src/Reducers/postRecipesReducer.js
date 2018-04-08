@@ -3,8 +3,8 @@ const postRecipesReducer = (state = [], action) => {
   case 'POST_RECIPES':
     return [...state, ...action.recipes];
   default:
-    return state
+    return state;
   }
 };
 
-export default postRecipesReducer
+export default postRecipesReducer;

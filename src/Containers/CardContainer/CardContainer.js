@@ -9,13 +9,9 @@ export const CardContainer = props => {
   if (props.recipes) {
     renderCards = props.recipes.map(recipe => {
       return (
-        <Card key={recipe.name}
-          name={recipe.name}
-          image={recipe.image}
-          totalTime={recipe.totaltime}
-          id={recipe.id}
-          ingredients={recipe.ingredients}
-          source={recipe.source}
+        <Card 
+          key={recipe.name}
+          recipe={recipe}
         />
       );
     });
