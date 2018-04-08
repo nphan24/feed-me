@@ -8,6 +8,7 @@ export const fetchRandomRecipes = async () => {
     let category = '';
     const response = await fetch(`http://api.yummly.com/v1/api/recipes?_app_id=${applicationId}&_app_key=${apiKey}&q=${category}`);
     const data = await response.json();
+    console.log('data', data);
     const recipesWithoutSource = await cleanRecipes(data.matches);
     const recipesWithSource = await fetchRecipeSource(recipesWithoutSource);
     return recipesWithSource;
