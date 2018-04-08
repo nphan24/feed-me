@@ -1,36 +1,53 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import Card from '../Card/Card';
 import './CardContainer.css';
 
 export const CardContainer = props => {
-  let renderCards;
+  const cardType = props.location.pathname === '/favorites' ? 'favorites': 'recipes';
 
-  if (props.recipes) {
-    renderCards = props.recipes.map(recipe => {
+  let renderCards;
+  
+  if (props.recipes.length === 0) {
+    renderCards = (<p>Loading...</p>);
+  } else { 
+    renderCards = props[cardType].map(recipe => {
+      const cardClass = props.favorites.find(fav => fav.title === recipe.title) ? 'selected' : '';
+
       return (
         <Card 
           key={recipe.name}
           recipe={recipe}
+          cardClass={cardClass}
         />
       );
     });
   }
 
-
   return (
     <section>
-      {props.recipes &&
-      <div className='card-container'>
-        {renderCards}
-      </div>
-      }
+      <Switch>
+        <Route 
+          exact path='/' 
+          render={()=> { 
+            return <div className='card-container'>
+              {renderCards}</div>;
+          }}/>
+        <Route 
+          exact path='/favorites'
+          render={()=> {
+            return <div className='card-container'>
+              {renderCards}</div>;
+          }}/>
+      </Switch>
     </section>
   );
 };
 
 export const mapStateToProps = state => ({
-  recipes: state.recipes
+  recipes: state.recipes,
+  favorites: state.favorites
 });
 
-export default connect(mapStateToProps)(CardContainer);
+export default withRouter(connect(mapStateToProps)(CardContainer));

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as Actions from '../../Actions/';
 import './Card.css';
 
-export const Card = ({recipe, favorites, addFavorite, removeFavorite}) => {
+export const Card = ({recipe, favorites, addFavorite, removeFavorite, cardClass}) => {
   const { name, image, totalTime, source } = recipe;
   
   const toggleFavorite = (recipe) => {
@@ -14,10 +14,10 @@ export const Card = ({recipe, favorites, addFavorite, removeFavorite}) => {
     }
   };
 
-  return <div className="recipe-card">
+  return <div className='recipe-card'>
     <p>{name}</p>
     <button 
-      className="favorite-button"
+      className={`favorite-button ${cardClass}`}
       onClick={()=> toggleFavorite(recipe)}>
       <span role='img' aria-labelledby='favorite star'>
         &#x2B50;

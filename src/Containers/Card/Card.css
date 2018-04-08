@@ -17,3 +17,7 @@
   height: 150px;
 }
 
+.selected {
+  background-color: yellow;
+}
+

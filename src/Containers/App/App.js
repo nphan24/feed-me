@@ -15,9 +15,9 @@ export class App extends Component {
   render() {
     return <div className="App">
       <header className="App-header">
-        <h1 className="App-title">
+        <NavLink to='/' className="App-title">
             My Husband Should Cook This To Feed-Me
-        </h1>
+        </NavLink>
         <NavLink 
           className="view-favorites-button"     to="/favorites">
             View Favorites
@@ -50,4 +50,4 @@ export const mapDispatchToProps = dispatch => ({
   postRecipes: recipes => dispatch(Actions.postRecipes(recipes))
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));
