@@ -17,7 +17,11 @@
   height: 150px;
 }
 
-.selected {
+.favorite-button .selected {
   background-color: yellow;
+}
+
+.link-instructions {
+  text-decoration: none;
 }
 

@@ -13,13 +13,11 @@ export const CardContainer = props => {
     renderCards = (<p>Loading...</p>);
   } else { 
     renderCards = props[cardType].map(recipe => {
-      const cardClass = props.favorites.find(fav => fav.title === recipe.title) ? 'selected' : '';
 
       return (
         <Card 
           key={recipe.name}
           recipe={recipe}
-          cardClass={cardClass}
         />
       );
     });
