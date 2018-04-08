@@ -5,10 +5,8 @@ import './Card.css';
 
 export const Card = ({recipe, favorites, addFavorite, removeFavorite}) => {
   const { name, image, totalTime, source } = recipe;
-  console.log('favorites', favorites);
   
   const toggleFavorite = (recipe) => {
-    console.log('favorites passed to toggle', recipe);
     if (!favorites.find(fav => fav.id === recipe.id)) {
       addFavorite(recipe);
     } else {
