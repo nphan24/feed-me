@@ -3,7 +3,7 @@ import * as mock from '../mockData/mockData';
 
 describe('postRecipes', () => {
   it('creates a type of POST_RECIPES', () => {
-    const recipes = mock.mockRecipes;
+    const recipes = mock.mockRecipe;
     const expected = {
       type: 'POST_RECIPES',
       recipes
