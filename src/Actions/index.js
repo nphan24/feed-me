@@ -3,9 +3,9 @@ export const postRecipes = recipes => ({
   recipes
 });
 
-export const addFavorite = favorites => ({
+export const addFavorite = recipe => ({
   type: 'ADD_FAVORITE',
-  favorites
+  recipe
 });
 
 export const removeFavorite = id => ({

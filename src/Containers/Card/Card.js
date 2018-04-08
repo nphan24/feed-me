@@ -5,11 +5,12 @@ import './Card.css';
 
 export const Card = ({recipe, favorites, addFavorite, removeFavorite}) => {
   const { name, image, totalTime, source } = recipe;
+  console.log('favorites', favorites);
   
-  const toggleFavorite = async (recipe) => {
-    console.log('favorites passed to toggle', favorites);
+  const toggleFavorite = (recipe) => {
+    console.log('favorites passed to toggle', recipe);
     if (!favorites.find(fav => fav.id === recipe.id)) {
-      addFavorite(recipe.id);
+      addFavorite(recipe);
     } else {
       removeFavorite(recipe.id);
     }
@@ -32,8 +33,8 @@ export const Card = ({recipe, favorites, addFavorite, removeFavorite}) => {
   </div>;
 };
 
-export const mapStateToProps = state => ({
-  favorites: state.favorites
+export const mapStateToProps = state => ({ 
+  favorites: state.favorites 
 });
 
 export const mapDispatchToProps = dispatch => ({

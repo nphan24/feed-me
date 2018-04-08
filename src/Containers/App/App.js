@@ -13,15 +13,32 @@ export class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">My Husband Should Cook This To Feed-Me</h1>
-          <NavLink className='view-favorites-button' to='/favorites'>View Favorites</NavLink>
-        </header>
-        <CardContainer />
-      </div>
-    );
+    return <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">
+            My Husband Should Cook This To Feed-Me
+        </h1>
+        <NavLink 
+          className="view-favorites-button"     to="/favorites">
+            View Favorites
+        </NavLink>
+        <NavLink 
+          className="view-button"            to="/breakfast">
+            Breakfast
+        </NavLink>
+        <NavLink 
+          className="view-button" 
+          to="/lunch">
+            Lunch
+        </NavLink>
+        <NavLink 
+          className="view-button" 
+          to="/dinner">
+            Dinner
+        </NavLink>
+      </header>
+      <CardContainer />
+    </div>;
   }
 }
 

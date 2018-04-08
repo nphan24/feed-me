@@ -11,3 +11,25 @@ describe('postRecipes', () => {
     expect(Actions.postRecipes(recipes)).toEqual(expected);
   });
 });
+
+describe('addFavorite', () => {
+  it('creates a type of ADD_FAVORITE', () => {
+    const recipe = mock.mockRecipe;
+    const expected = {
+      type: 'ADD_FAVORITE',
+      recipe
+    };
+    expect(Actions.addFavorite(recipe)).toEqual(expected);
+  });
+});
+
+describe('removeFavorite', () => {
+  it('creates a type of REMOVE_FAVORITE', () => {
+    const id = 2;
+    const expected = {
+      type: 'REMOVE_FAVORITE',
+      id
+    };
+    expect(Actions.removeFavorite(id)).toEqual(expected);
+  });
+});
