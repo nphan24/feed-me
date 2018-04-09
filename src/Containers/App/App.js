@@ -4,6 +4,8 @@ import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import CardContainer from '../CardContainer/CardContainer';
 import * as Actions from '../../Actions';
 import { Route, NavLink, withRouter } from 'react-router-dom';
+import Nav from '../Nav/Nav';
+
 import './App.css';
 
 export class App extends Component {
@@ -15,29 +17,22 @@ export class App extends Component {
   render() {
     return <div className="App">
       <header className="App-header">
-        <NavLink to='/' className="App-title">
+        <NavLink to="/" className="App-title">
             Feed-Me
         </NavLink>
-        <NavLink 
-          className="view-favorites-button"     
-          to="/favorites">
+        <Nav />
+        <NavLink className="view-favorites-button" to="/favorites">
             View Favorites
         </NavLink>
-        <NavLink 
-          className="view-button"            
-          to="/breakfast">
-            Breakfast
+        {/* <NavLink className="view-button" to="/breakfast">
+              Breakfast
         </NavLink>
-        <NavLink 
-          className="view-button" 
-          to="/lunch">
-            Lunch
+        <NavLink className="view-button" to="/lunch">
+              Lunch
         </NavLink>
-        <NavLink 
-          className="view-button" 
-          to="/dinner">
-            Dinner
-        </NavLink>
+        <NavLink className="view-button" to="/dinner">
+              Dinner
+        </NavLink> */}
       </header>
       <CardContainer />
     </div>;
