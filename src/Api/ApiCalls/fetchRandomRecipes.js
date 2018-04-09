@@ -5,13 +5,14 @@ import { fetchRecipeSource } from './fetchRecipeSource';
 
 export const fetchRandomRecipes = async () => {
   try {
-    const response = await fetch(`http://api.yummly.com/v1/api/recipes?_app_id=${applicationId}&_app_key=${apiKey}`);
+    let category = '';
+    const response = await fetch(`http://api.yummly.com/v1/api/recipes?_app_id=${applicationId}&_app_key=${apiKey}&q=${category}`);
     const data = await response.json();
     const recipesWithoutSource = await cleanRecipes(data.matches);
     const recipesWithSource = await fetchRecipeSource(recipesWithoutSource);
     return recipesWithSource;
   } catch (error) {
-    throw new error('error');
+    throw new error(error.message);
   }
 };
 

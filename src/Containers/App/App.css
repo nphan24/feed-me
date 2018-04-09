@@ -16,13 +16,23 @@
 
 .App-title {
   font-size: 1.5em;
+  text-decoration: none;
+  color: white;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.view-button {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.view-favorites-button {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  display: block;
 }
