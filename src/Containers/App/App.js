@@ -16,14 +16,16 @@ export class App extends Component {
     return <div className="App">
       <header className="App-header">
         <NavLink to='/' className="App-title">
-            My Husband Should Cook This To Feed-Me
+            Feed-Me
         </NavLink>
         <NavLink 
-          className="view-favorites-button"     to="/favorites">
+          className="view-favorites-button"     
+          to="/favorites">
             View Favorites
         </NavLink>
         <NavLink 
-          className="view-button"            to="/breakfast">
+          className="view-button"            
+          to="/breakfast">
             Breakfast
         </NavLink>
         <NavLink 
