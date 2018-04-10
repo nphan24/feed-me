@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import * as routes from '../../constants/routes';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 
