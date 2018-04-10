@@ -6,9 +6,9 @@ export const SignUp = () => {
   return (
     <div>
       <p>This is the Sign up page</p>
-      {/* <NavLink to={routes.LOGIN} className="login-route">
+      <NavLink to={routes.LOGIN} className="login-route">
         Have an account? Login!
-      </NavLink> */}
+      </NavLink>
     </div>
   );
 };
