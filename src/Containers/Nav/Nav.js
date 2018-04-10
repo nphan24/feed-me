@@ -4,6 +4,7 @@ import * as routes from '../../constants/routes';
 
 const Nav = () => {
   return <div>
+    <p>work</p>
     <NavLink to={routes.LOGIN} className='login-route'>Login / Sign Up</NavLink>
   </div>;
 };
