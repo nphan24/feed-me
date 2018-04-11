@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
 .App-header {
   background-color: #2f97ef;
-  height: 100px;
+  height: 120px;
   padding: 20px;
   color: white;
 }
@@ -9,6 +11,8 @@
   font-size: 2.5em;
   text-decoration: none;
   visibility: center;
+  font-family: 'PT Serif',
+  serif;
 }
 
 .top-icon {
@@ -36,8 +40,24 @@
   text-align: right;
   display: block;
   font-size: 1.5em;
+  font-family: 'PT Serif',
+  serif;
 }
 
 .view-favorites-button:hover {
+  color: #E1DCDC;
+}
+
+.logout-button {
+  border: none;
+  font-size: 1.5em;
+  font-family: 'PT Serif',
+  serif;
+  color: white;
+  background-color: #2f97ef;
+  float: right;
+}
+
+.logout-button:hover {
   color: #E1DCDC;
 }

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
 .recipe-card {
   border: 1px solid black;
   width: 260px;
-  height: 320px;
+  height: 350px;
   margin: 5px;
   background-color: #E1DCDC;
   border-radius: 15px;
@@ -24,7 +26,9 @@
   width: 40px;
   height: 35px;
   font-size: 1.5em;
-}
+  position: absolute;
+  margin: 10px;
+} 
 
 .favorite-button:hover {
   background-color: #B3D7E8;
@@ -36,8 +40,9 @@
 }
 
 .recipe-image {
-  width: 150px;
-  height: 150px;
+  width: 260px;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .favorite-button .selected {
@@ -47,9 +52,27 @@
 .link-instructions {
   text-decoration: none;
   color: #2D77BA;
+  text-align: center;
+  margin-left: 85px;
+  vertical-align: bottom;
 }
 
 .link-instructions:hover {
   color: black;
 }
 
+.selected {
+  background-color: #2D77BA;
+}
+
+.recipe-name, .recipe-cooktime {
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'PT Serif',
+  serif;
+}
+
+.recipe-name {
+  font-weight: 700;
+  font-size: 1.1em;
+}

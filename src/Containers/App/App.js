@@ -5,33 +5,45 @@ import CardContainer from '../CardContainer/CardContainer';
 import * as Actions from '../../Actions';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import { auth } from '../../firebase';
 import './App.css';
 
 const topIcon = require('../../assets/top-icon.svg');
 
 export class App extends Component {
   async componentDidMount() {
-    // const recipes = await fetchRandomRecipes();
-    const recipes = [{name:'soup', image:'url', totalTime: 3500, source:'dfdjf' }];
+    const recipes = await fetchRandomRecipes();
+    // const recipes = [{name:'soup', image:'url', totalTime: 3500, source:'dfdjf' }];
     this.props.postRecipes(recipes);
+  }
+
+  handleLogout = () => {
+    console.log('app hello');
+    auth.doSignOut();
+    this.props.history.push('/');
+    this.props.logoutUser();
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <NavLink to="/" className="App-title">
-            <img src={topIcon} className='top-icon'/>Feed-Me
+          <NavLink 
+            to="/" 
+            className="App-title">
+            <img src={topIcon} className="top-icon"/>
+            Feed-Me
           </NavLink>
-          <NavLink className="view-favorites-button" to="/favorites">
+          <NavLink 
+            className="view-favorites-button" to="/favorites">
             View Favorites
           </NavLink>
-          {this.props.user.username &&
-          <button>Logout</button>
-          }
-          {!this.props.user.username &&
-          <Nav />
-          }
+          {this.props.user.email && 
+          <button  className="logout-button" 
+            onClick={this.handleLogout}>
+            Logout
+          </button>}
+          {!this.props.user.email && <Nav />}
           {/* <NavLink className="view-button" to="/breakfast">
               Breakfast
         </NavLink>
@@ -53,7 +65,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  postRecipes: recipes => dispatch(Actions.postRecipes(recipes))
+  postRecipes: recipes => dispatch(Actions.postRecipes(recipes)),
+  logoutUser: user => dispatch(Actions.logoutUser(user))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

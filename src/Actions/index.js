@@ -17,3 +17,7 @@ export const addUser = user => ({
   type: 'ADD_USER',
   user
 });
+
+export const logoutUser = () => ({
+  type: 'LOGOUT_USER'
+});

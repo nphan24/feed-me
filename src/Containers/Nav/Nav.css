@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
 .login-signup {
   text-align: right;
   font-size: 1.2em;
@@ -6,6 +8,9 @@
 .login-route {
   text-decoration: none;
   color: white;
+  font-family: 'PT Serif',
+  serif;
+  margin: 10px;
 }
 
 .login-route:hover {

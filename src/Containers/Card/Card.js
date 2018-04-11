@@ -9,7 +9,7 @@ export const Card = ({
   addFavorite, 
   removeFavorite 
 }) => {
-  const { name, image, totalTime, source } = recipe;
+  const { name, image, totaltime, source } = recipe;
   const cardClass = favorites.find(fav => fav.name === recipe.name) ? 'selected' : '';
   
   const toggleFavorite = (recipe) => {
@@ -22,7 +22,6 @@ export const Card = ({
 
   return (
     <div className='recipe-card'>
-      <p>{name}</p>
       <button 
         className={`favorite-button ${cardClass}`}
         onClick={()=> toggleFavorite(recipe)}>
@@ -31,7 +30,8 @@ export const Card = ({
         </span>
       </button>
       <img src={image} className="recipe-image" alt='recipe'/>
-      <p>Total cook time: {totalTime} mins</p>
+      <p className='recipe-name'>{name}</p>
+      <p className='recipe-cooktime'>Total cook time: {totaltime} mins</p>
       <a href={source} target="..blank" className='link-instructions'>
         Make This!
       </a>
