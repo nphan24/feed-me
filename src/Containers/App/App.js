@@ -5,8 +5,9 @@ import CardContainer from '../CardContainer/CardContainer';
 import * as Actions from '../../Actions';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import Nav from '../Nav/Nav';
-
 import './App.css';
+
+const topIcon = require('../../assets/top-icon.svg');
 
 export class App extends Component {
   async componentDidMount() {
@@ -19,7 +20,7 @@ export class App extends Component {
       <div className="App">
         <header className="App-header">
           <NavLink to="/" className="App-title">
-            Feed-Me
+            <img src={topIcon} className='top-icon'/>Feed-Me
           </NavLink>
           <NavLink className="view-favorites-button" to="/favorites">
             View Favorites

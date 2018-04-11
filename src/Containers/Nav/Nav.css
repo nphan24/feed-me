@@ -1,0 +1,13 @@
+.login-signup {
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.login-route {
+  text-decoration: none;
+  color: white;
+}
+
+.login-route:hover {
+  color: #E1DCDC;
+}

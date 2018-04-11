@@ -4,7 +4,7 @@ import * as routes from '../../constants/routes';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
-
+import './SignUp.css';
 export class SignUp extends Component {
   constructor() {
     super();
@@ -70,44 +70,50 @@ export class SignUp extends Component {
     username === '';
     
     return (
-      <form className="signup-form" onSubmit={this.handleSubmit}>
-        <h2>Create New Account</h2>
-        <label>
-          <input 
-            type="text" 
-            placeholder="username" 
-            value={username} 
-            name="username" 
-            onChange={this.handleInput} 
-          />
-          <input 
-            type="email" 
-            placeholder="Email" 
-            value={email} 
-            name="email" 
-            onChange={this.handleInput} 
-          />
-          <input 
-            type="password" 
-            placeholder="Password" 
-            value={passwordOne} 
-            name="passwordOne" 
-            onChange={this.handleInput} 
-          />
-          <input
-            type="password" 
-            placeholder="Confirm Password" 
-            value={passwordTwo} 
-            name="passwordTwo" 
-            onChange={this.handleInput} 
-          />
-          <button disabled={isInvalid} type="submit">Sign Up</button>
-        </label>
-        <NavLink to={routes.LOGIN} className="login-route">
+      <div className='signup-component'>
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <h2 className='signup-comment'>Create New Account</h2>
+          <label>
+            <input 
+              type="text" 
+              placeholder="username"
+              className='signup-field' 
+              value={username} 
+              name="username" 
+              onChange={this.handleInput} 
+            />
+            <input 
+              type="email" 
+              placeholder="Email"
+              className='signup-field'
+              value={email} 
+              name="email" 
+              onChange={this.handleInput} 
+            />
+            <input 
+              type="password" 
+              placeholder="Password"
+              className='signup-field' 
+              value={passwordOne} 
+              name="passwordOne" 
+              onChange={this.handleInput} 
+            />
+            <input
+              type="password" 
+              placeholder="Confirm Password"
+              className='signup-field bottom-input' 
+              value={passwordTwo} 
+              name="passwordTwo" 
+              onChange={this.handleInput} 
+            />
+            <button disabled={isInvalid} type="submit" className='signup-submit-button'>Sign Up</button>
+          </label>
+        </form>
+        <NavLink to={routes.LOGIN} className="login-link">
           Have an account? Login!
         </NavLink>
-        {error && <p>{error.message}</p>}
-      </form>
+        {error && <p className='signup-error'>{error.message}</p>}
+      </div>
     );
   }
 }
