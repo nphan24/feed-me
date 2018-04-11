@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import * as routes from '../../constants/routes';
+import { connect } from 'react-redux';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
+import * as Actions from '../../Actions';
+
 
 export class Login extends Component {
   constructor() {
@@ -34,15 +37,19 @@ export class Login extends Component {
       };
       this.props.addUser(user);
       this.props.history.push('/');
+      this.setState({
+        username: '',
+        email: '',
+        password: ''
+      });
     } catch (error) {
       this.setState({error: error});
     }
   }
-
-
+  
   render() {
     const {
-      username,
+      email,
       password,
       error
     } = this.state;
@@ -55,9 +62,9 @@ export class Login extends Component {
           <label>
             <input
               type='text'
-              placeholder='Username'
-              value={username}
-              name='username'
+              placeholder='email'
+              value={email}
+              name='email'
               onChange={this.handleInput}
             />
             <input
@@ -78,4 +85,14 @@ export class Login extends Component {
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  user: state.user
+});
+
+export const mapDispatchToProps = dispatch => ({
+  addUser: user => dispatch(Actions.addUser(user))
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
