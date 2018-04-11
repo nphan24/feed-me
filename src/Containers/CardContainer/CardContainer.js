@@ -5,7 +5,7 @@ import * as routes from '../../constants/routes';
 import Card from '../Card/Card';
 import './CardContainer.css';
 import { Login } from '../Login/Login';
-import { SignUp } from '../SignUp/SignUp';
+import SignUp from '../SignUp/SignUp';
 
 export const CardContainer = props => {
   const cardType = props.location.pathname === '/favorites' ? 'favorites': 'recipes';
@@ -34,8 +34,8 @@ export const CardContainer = props => {
       <Route exact path="/favorites" render={() => {
         return <div className="card-container">{renderCards}</div>;
       }} />
-      <Route exact path={routes.LOGIN} component={() => <Login />} />
-      <Route exact path={routes.SIGN_UP} component={() => <SignUp />} />
+      <Route exact path={routes.LOGIN} component={Login} />
+      <Route exact path={routes.SIGN_UP} component={SignUp} />
     </Switch>
   </section>;
 };

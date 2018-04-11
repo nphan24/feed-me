@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
+import * as Actions from '../../Actions';
 
 export class SignUp extends Component {
   constructor() {
@@ -31,9 +33,26 @@ export class SignUp extends Component {
 
     auth.signUp(email, passwordOne)
       .then(authUser => {
-        this.setState(() => ({...this.state}));
+        const user = {
+          username,
+          email: authUser.email,
+          uid: authUser.uid
+        };
+        this.props.addUser(user);
       })
-      .catch(error => { error });
+      .then(authUser => {
+        this.setState(() => ({
+          username: '',
+          email: '',
+          passwordOne: '',
+          passwordTwo: '',
+          error: false
+        }));
+      })
+      .then(authUser => this.props.history.push('/'))
+      .catch(error => {
+        this.setState({error: error});
+      });
   }
   
   render() {
@@ -85,8 +104,18 @@ export class SignUp extends Component {
         <NavLink to={routes.LOGIN} className="login-route">
           Have an account? Login!
         </NavLink>
-        {error && <p>{'Please try again'}</p>}
+        {error && <p>{error.message}</p>}
       </form>
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  user: state.user
+});
+
+export const mapDispatchToProps = dispatch => ({
+  addUser: user => dispatch(Actions.addUser(user))
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));
