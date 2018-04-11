@@ -12,3 +12,8 @@ export const removeFavorite = id => ({
   type: 'REMOVE_FAVORITE',
   id
 });
+
+export const addUser = user => ({
+  type: 'ADD_USER',
+  user
+});
