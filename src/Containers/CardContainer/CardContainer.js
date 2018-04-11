@@ -4,7 +4,7 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 import Card from '../Card/Card';
 import './CardContainer.css';
-import { Login } from '../Login/Login';
+import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp';
 
 export const CardContainer = props => {

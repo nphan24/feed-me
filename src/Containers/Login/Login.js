@@ -4,13 +4,11 @@ import { connect } from 'react-redux';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
-
-
 export class Login extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
+      email: '',
       password: '',
       error: false
     };
@@ -24,13 +22,13 @@ export class Login extends Component {
 
   handleSubmit = async (event) => {
     event.preventdefault();
+    console.log('this', this.props);
     const {
-      username,
       email, 
-      passwordOne 
+      password 
     } = this.state;
     try {
-      const authUser = await auth.login(email, passwordOne);
+      const authUser = await auth.login(email, password);
       const user = {
         email: authUser.email,
         uid: authUser.uid
@@ -38,7 +36,6 @@ export class Login extends Component {
       this.props.addUser(user);
       this.props.history.push('/');
       this.setState({
-        username: '',
         email: '',
         password: ''
       });
@@ -46,7 +43,7 @@ export class Login extends Component {
       this.setState({error: error});
     }
   }
-  
+
   render() {
     const {
       email,
