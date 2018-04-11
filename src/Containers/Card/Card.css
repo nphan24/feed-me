@@ -1,15 +1,38 @@
 .recipe-card {
   border: 1px solid black;
-  width: 280px;
-  height: 340px;
+  width: 260px;
+  height: 320px;
   margin: 5px;
+  background-color: #E1DCDC;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.recipe-card:hover {
+  position: relative;
+  z-index: 100;
+  transition-duration: .5s;
+  transform: scale(1.01);
 }
 
 .favorite-button {
   display: block;
   margin: 0 auto 10px auto;
   border-radius: 30px 30px 30px 30px;
-  background-color: rgb(24, 204, 33)
+  background-color:white;
+  width: 40px;
+  height: 35px;
+  font-size: 1.5em;
+}
+
+.favorite-button:hover {
+  background-color: #B3D7E8;
+}
+
+.favorites-image {
+  width: 35px;
+  height: 30px;
 }
 
 .recipe-image {
@@ -18,10 +41,15 @@
 }
 
 .favorite-button .selected {
-  background-color: yellow;
+  background-color: #4997E8;
 }
 
 .link-instructions {
   text-decoration: none;
+  color: #2D77BA;
+}
+
+.link-instructions:hover {
+  color: black;
 }
 

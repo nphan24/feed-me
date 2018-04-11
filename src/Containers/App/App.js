@@ -11,7 +11,8 @@ const topIcon = require('../../assets/top-icon.svg');
 
 export class App extends Component {
   async componentDidMount() {
-    const recipes = await fetchRandomRecipes();
+    // const recipes = await fetchRandomRecipes();
+    const recipes = [{name:'soup', image:'url', totalTime: 3500, source:'dfdjf' }];
     this.props.postRecipes(recipes);
   }
 
