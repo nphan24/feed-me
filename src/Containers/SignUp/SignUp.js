@@ -63,10 +63,12 @@ export class SignUp extends Component {
       passwordTwo,
       error,
     } = this.state;
+
     const isInvalid = passwordOne !== passwordTwo || 
     passwordOne === '' || 
     email === '' || 
     username === '';
+    
     return (
       <form className="signup-form" onSubmit={this.handleSubmit}>
         <h2>Create New Account</h2>
@@ -74,28 +76,28 @@ export class SignUp extends Component {
           <input 
             type="text" 
             placeholder="username" 
-            value={this.state.username} 
+            value={username} 
             name="username" 
             onChange={this.handleInput} 
           />
           <input 
             type="email" 
             placeholder="Email" 
-            value={this.state.email} 
+            value={email} 
             name="email" 
             onChange={this.handleInput} 
           />
           <input 
             type="password" 
             placeholder="Password" 
-            value={this.state.passwordOne} 
+            value={passwordOne} 
             name="passwordOne" 
             onChange={this.handleInput} 
           />
           <input
             type="password" 
             placeholder="Confirm Password" 
-            value={this.state.passwordTwo} 
+            value={passwordTwo} 
             name="passwordTwo" 
             onChange={this.handleInput} 
           />

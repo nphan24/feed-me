@@ -15,16 +15,22 @@ export class App extends Component {
   }
 
   render() {
-    return <div className="App">
-      <header className="App-header">
-        <NavLink to="/" className="App-title">
+    return (
+      <div className="App">
+        <header className="App-header">
+          <NavLink to="/" className="App-title">
             Feed-Me
-        </NavLink>
-        <Nav />
-        <NavLink className="view-favorites-button" to="/favorites">
+          </NavLink>
+          <NavLink className="view-favorites-button" to="/favorites">
             View Favorites
-        </NavLink>
-        {/* <NavLink className="view-button" to="/breakfast">
+          </NavLink>
+          {this.props.user.username &&
+          <button>Logout</button>
+          }
+          {!this.props.user.username &&
+          <Nav />
+          }
+          {/* <NavLink className="view-button" to="/breakfast">
               Breakfast
         </NavLink>
         <NavLink className="view-button" to="/lunch">
@@ -33,18 +39,19 @@ export class App extends Component {
         <NavLink className="view-button" to="/dinner">
               Dinner
         </NavLink> */}
-      </header>
-      <CardContainer />
-    </div>;
+        </header>
+        <CardContainer />
+      </div>
+    );
   }
 }
 
-// export const mapStateToProps = state => ({
-//   recipes: state
-// });
+export const mapStateToProps = state => ({
+  user: state.user
+});
 
 export const mapDispatchToProps = dispatch => ({
   postRecipes: recipes => dispatch(Actions.postRecipes(recipes))
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
