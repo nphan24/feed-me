@@ -1,0 +1,64 @@
+.login-component {
+  background-color: #e2dcdc;
+  width: 500px;
+  margin: auto auto;
+  text-align: center;
+  box-shadow: -10px 5px 15px grey;
+}
+
+.input-field {
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  font-size: 36px;
+}
+
+.input-field::-webkit-input-placeholder {
+  font-size: 48px;
+}
+
+.bottom-field {
+  margin-bottom: 15px;
+}
+
+.login-comment {
+  margin: 0;
+  padding-top: 50px;
+  font-size: 2.5em;
+}
+
+.login-submit-button {
+  margin-bottom: 15px;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 1em;
+  color: black;
+}
+
+.login-submit-button:hover {
+  background-color: #abd8ea;
+}
+
+.signin-route {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.signin-route:hover {
+  color:#BA55D3;
+}
+
+.login-error {
+  font-size: 2em;
+  color: red;
+}
+
+
+

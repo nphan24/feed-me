@@ -4,8 +4,10 @@ import { Route, withRouter, Switch } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 import Card from '../Card/Card';
 import './CardContainer.css';
-import { Login } from '../Login/Login';
+import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp';
+
+const loading = require('../../assets/loading.gif');
 
 export const CardContainer = props => {
   const cardType = props.location.pathname === '/favorites' ? 'favorites': 'recipes';
@@ -13,7 +15,14 @@ export const CardContainer = props => {
   let renderCards;
   
   if (props.recipes.length === 0) {
-    renderCards = (<p>Loading...</p>);
+    renderCards = (
+      <div>
+        <p className='loading-comment'>
+          Loading...
+        </p>
+        <img className='loading-gif'src={loading}/>
+      </div>
+    );
   } else { 
     renderCards = props[cardType].map(recipe => {
 
@@ -26,7 +35,7 @@ export const CardContainer = props => {
     });
   }
 
-  return <section>
+  return <section className='card-container-section'>
     <Switch>
       <Route exact path="/" render={() => {
         return <div className="card-container">{renderCards}</div>;
