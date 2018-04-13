@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import './DropDown.css';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
-
+import { connect } from 'react-redux';
+import * as Actions from '../../Actions/';
 export class DropDown extends Component {
 
-  handleChange = (event) => {
-    fetchRandomRecipes(event.target.value);
+  handleChange = async (event) => {
+    const recipes = await fetchRandomRecipes(event.target.value);
+    this.props.replaceRecipes(recipes);
   };
 
   render() {
@@ -27,3 +29,9 @@ export class DropDown extends Component {
     </div>;
   }
 }
+
+export const mapDispatchToProps = dispatch => ({
+  replaceRecipes: recipes => dispatch(Actions.replaceRecipes(recipes))
+});
+
+export default (connect(null, mapDispatchToProps)(DropDown));

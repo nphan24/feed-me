@@ -3,6 +3,11 @@ export const postRecipes = recipes => ({
   recipes
 });
 
+export const replaceRecipes = recipes => ({
+  type: 'REPLACE_RECIPES',
+  recipes
+});
+
 export const addFavorite = recipe => ({
   type: 'ADD_FAVORITE',
   recipe

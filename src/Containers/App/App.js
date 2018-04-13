@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import CardContainer from '../CardContainer/CardContainer';
-import { DropDown } from '../../Components/DropDown/DropDown';
+import DropDown from '../../Components/DropDown/DropDown';
 import * as Actions from '../../Actions';
 import { NavLink, withRouter } from 'react-router-dom';
 import Nav from '../Nav/Nav';
