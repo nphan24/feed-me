@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import CardContainer from '../CardContainer/CardContainer';
+import { DropDown } from '../../Components/DropDown/DropDown';
 import * as Actions from '../../Actions';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import Nav from '../Nav/Nav';
@@ -9,7 +10,6 @@ import { auth } from '../../firebase';
 import './App.css';
 
 const topIcon = require('../../assets/top-icon.svg');
-
 export class App extends Component {
   async componentDidMount() {
     const recipes = await fetchRandomRecipes();
@@ -44,6 +44,7 @@ export class App extends Component {
             Logout
           </button>}
           {!this.props.user.email && <Nav />}
+          <DropDown />
           {/* <NavLink className="view-button" to="/breakfast">
               Breakfast
         </NavLink>

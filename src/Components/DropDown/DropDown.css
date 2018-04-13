@@ -1,0 +1,10 @@
+.dropdown-menu {
+  color: black;
+  z-index: 100;
+  position: absolute;
+  margin: 0;
+}
+
+ul li {
+  display: none;
+}

@@ -23,7 +23,7 @@ export class SignUp extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const {
       username,
@@ -31,28 +31,25 @@ export class SignUp extends Component {
       passwordOne,
     } = this.state;
 
-    auth.signUp(email, passwordOne)
-      .then(authUser => {
-        const user = {
-          username,
-          email: authUser.email,
-          uid: authUser.uid
-        };
-        this.props.addUser(user);
-      })
-      .then(authUser => {
-        this.setState(() => ({
-          username: '',
-          email: '',
-          passwordOne: '',
-          passwordTwo: '',
-          error: false
-        }));
-      })
-      .then(authUser => this.props.history.push('/'))
-      .catch(error => {
-        this.setState({error: error});
+    try {
+      const authUser = await auth.signUp    (email, passwordOne)
+      const user = {
+        username,
+        email: authUser.email,
+        uid: authUser.uid
+      };
+      this.props.addUser(user);
+      this.setState({
+        username: '',
+        email: '',
+        passwordOne: '',
+        passwordTwo: '',
+        error: false
       });
+      this.props.history.push('/');
+    } catch (error) {
+      this.setState({ error });
+    }
   }
   
   render() {

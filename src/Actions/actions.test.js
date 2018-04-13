@@ -33,3 +33,30 @@ describe('removeFavorite', () => {
     expect(Actions.removeFavorite(id)).toEqual(expected);
   });
 });
+
+describe('addUser', () => {
+  it('creates a type of ADD_USER', () => {
+    const user = {
+      name:'ngoc', 
+      password:'n@gmail.com'
+    };
+    const expected = {
+      type: 'ADD_USER',
+      user
+    };
+    expect(Actions.addUser(user)).toEqual(expected);
+  });
+});
+
+describe('logoutUser', () => {
+  it('creates a type of LOGOUT_USER', () => {
+    const user = {
+      name: 'ngoc',
+      password: 'n@gmail.com'
+    };
+    const expected = {
+      type: 'LOGOUT_USER'
+    };
+    expect(Actions.logoutUser(user)).toEqual(expected);
+  });
+});

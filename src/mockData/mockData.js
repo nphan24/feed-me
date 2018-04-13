@@ -50,3 +50,9 @@ export const mockRemainingArray = [
     id: 3
   }
 ];
+
+export const mockUser = {
+  username: 'dog',
+  email:'dog@gmail.com',
+  password: 'dogdog'
+}
