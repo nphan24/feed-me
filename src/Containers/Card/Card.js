@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as Actions from '../../Actions/';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 export const Card = ({
@@ -10,7 +11,8 @@ export const Card = ({
   removeFavorite 
 }) => {
   const { name, image, totaltime, source } = recipe;
-  const cardClass = favorites.find(fav => fav.name === recipe.name) ? 'selected' : '';
+  const cardClass = 
+    favorites.find(fav => fav.name === recipe.name) ? 'selected' : '';
   
   const toggleFavorite = (recipe) => {
     if (!favorites.find(fav => fav.id === recipe.id)) {
@@ -25,7 +27,9 @@ export const Card = ({
       <button 
         className={`favorite-button ${cardClass}`}
         onClick={()=> toggleFavorite(recipe)}>
-        <span role='img' aria-labelledby='favorite star' className='favorites-image'>
+        <span role='img' 
+          aria-labelledby='favorite star' 
+          className='favorites-image'>
         &#x2B50;
         </span>
       </button>
@@ -47,6 +51,13 @@ export const mapDispatchToProps = dispatch => ({
   addFavorite: recipe => dispatch(Actions.addFavorite(recipe)),
   removeFavorite: id => dispatch(Actions.removeFavorite(id))
 });
+
+Card.propTypes = {
+  removeFavorite: PropTypes.func,
+  addFavorite: PropTypes.func,
+  favorites: PropTypes.array,
+  recipe: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
 

@@ -1,6 +1,6 @@
 import { apiKey, applicationId } from './apiKey';
 import { cleanRecipes } from 
-'../helper/cleanRecipes';
+  '../helper/cleanRecipes';
 import { fetchRecipeSource } from './fetchRecipeSource';
 
 export const fetchRandomRecipes = async (selected) => {

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
-import { Route, NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
+import PropTypes from 'prop-types';
 import './SignUp.css';
 export class SignUp extends Component {
   constructor() {
@@ -28,11 +29,11 @@ export class SignUp extends Component {
     const {
       username,
       email,
-      passwordOne,
+      passwordOne
     } = this.state;
 
     try {
-      const authUser = await auth.signUp    (email, passwordOne)
+      const authUser = await auth.signUp(email, passwordOne);
       const user = {
         username,
         email: authUser.email,
@@ -58,7 +59,7 @@ export class SignUp extends Component {
       email,
       passwordOne,
       passwordTwo,
-      error,
+      error
     } = this.state;
 
     const isInvalid = passwordOne !== passwordTwo || 
@@ -103,7 +104,10 @@ export class SignUp extends Component {
               name="passwordTwo" 
               onChange={this.handleInput} 
             />
-            <button disabled={isInvalid} type="submit" className='signup-submit-button'>Sign Up</button>
+            <button disabled={isInvalid} 
+              type="submit" 
+              className='signup-submit-button'>Sign Up
+            </button>
           </label>
         </form>
         <NavLink to={routes.LOGIN} className="login-link">
@@ -122,5 +126,11 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addUser: user => dispatch(Actions.addUser(user))
 });
+
+SignUp.propTypes = {
+  user: PropTypes.object,
+  addUser: PropTypes.func,
+  history: PropTypes.object
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));

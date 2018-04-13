@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Dropdown from 'react-dropdown';
 import './DropDown.css';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
+import PropTypes from 'prop-types';
 import './Login.css';
 export class Login extends Component {
   constructor() {
@@ -33,7 +34,7 @@ export class Login extends Component {
         uid: authUser.uid 
       };
       this.props.addUser(user);
-      this.setState ({
+      this.setState({
         email: '',
         password: '',
         error: false
@@ -73,8 +74,7 @@ export class Login extends Component {
         </form>
         <NavLink 
           to={routes.SIGN_UP} 
-          className="signin-route">
-          Don't have an account? Sign Up!
+          className="signin-route">Don't have an account? Sign Up!
         </NavLink>
         {error && <p className="login-error">{error.message}</p>}
       </div>
@@ -89,6 +89,12 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addUser: user => dispatch(Actions.addUser(user))
 });
+
+Login.propTypes = {
+  addUser: PropTypes.func,
+  user: PropTypes.object,
+  history: PropTypes.object
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
