@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './DropDown.css';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import { connect } from 'react-redux';
-import * as Actions from '../../Actions/';
+import * as Actions from '../../Actions';
 export class DropDown extends Component {
 
   handleChange = async (event) => {
