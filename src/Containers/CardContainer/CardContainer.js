@@ -33,11 +33,11 @@ export const CardContainer = props => {
       <img className="nofavorites-gif" src={noFavorites} alt="no favorites" />
     </div>;
   } else { 
-    renderCards = props[cardType].map(recipe => {
+    renderCards = props[cardType].map((recipe, index) => {
 
       return (
         <Card 
-          key={recipe.name}
+          key={recipe.name + index}
           recipe={recipe}
         />
       );

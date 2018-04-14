@@ -3,7 +3,7 @@ import * as mock from '../../../mockData/mockData';
 
 describe('fetchRandomRecipes', () => {
   beforeEach(()=> {
-    window.fetch = jest.fn().mockImplementation(() => Promise.reselve({
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({
         data: mock.mockRecipesArray
@@ -22,6 +22,10 @@ describe('fetchRandomRecipes', () => {
   });
 
   it('should call fetchRecipeSource', () => {
+
+  });
+
+  it('should return an array of recipes with its source', () => {
 
   });
 

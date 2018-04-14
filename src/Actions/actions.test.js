@@ -12,6 +12,17 @@ describe('postRecipes', () => {
   });
 });
 
+describe('replaceRecipes', () => {
+  it('creates a type of REPLACE_RECIPES', () => {
+    const recipes = mock.mockRecipe;
+    const expected = {
+      type: 'REPLACE_RECIPES',
+      recipes
+    };
+    expect(Actions.replaceRecipes(recipes)).toEqual(expected);
+  });
+});
+
 describe('addFavorite', () => {
   it('creates a type of ADD_FAVORITE', () => {
     const recipe = mock.mockRecipe;

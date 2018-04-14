@@ -1,4 +1,4 @@
-const usersReducer = (state = {}, action) => {
+const userReducer = (state = {}, action) => {
   switch (action.type) {
   case 'ADD_USER':
     return Object.assign({}, state, action.user);
@@ -9,4 +9,4 @@ const usersReducer = (state = {}, action) => {
   }
 };
 
-export default usersReducer;
+export default userReducer;
