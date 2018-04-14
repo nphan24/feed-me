@@ -7,6 +7,20 @@ export const mockRecipe = {
   id: 2
 };
 
+export const favorites = {
+  name: 'pasta',
+  image: 'url',
+  totalTime: '30',
+  id: 2
+};
+
+export const favoritesArray = [{
+  name: 'pasta',
+  image: 'url',
+  totalTime: '30',
+  id: 2
+}];
+
 export const uncleanedMockRecipeData = {
   matches: [
     {

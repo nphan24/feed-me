@@ -54,10 +54,12 @@ describe('App', () => {
 });
 
 describe('mapStateToProps', () => {
-  const state = {user: {email:'dog@gmail.com', uid: 24}};
-  const expected = { email: 'dog@gmail.com', uid: 24 };
-  const mapped = mapStateToProps(state);
-  expect(mapped.user).toEqual(expected);
+  it('should map user to props', () => {
+    const state = {user: {email:'dog@gmail.com', uid: 24}};
+    const expected = { email: 'dog@gmail.com', uid: 24 };
+    const mapped = mapStateToProps(state);
+    expect(mapped.user).toEqual(expected);
+  });
 });
 
 describe('mapDispatchToProps', () => {
