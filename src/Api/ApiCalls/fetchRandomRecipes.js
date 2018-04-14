@@ -12,7 +12,7 @@ export const fetchRandomRecipes = async (selected) => {
     const recipesWithSource = await fetchRecipeSource(recipesWithoutSource);
     return recipesWithSource;
   } catch (error) {
-    throw new error(error.message);
+    throw new Error(error.message);
   }
 };
 
