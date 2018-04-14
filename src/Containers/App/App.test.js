@@ -1,30 +1,64 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import { App, mapDispatchToProps } from './App';
+import { App, mapStateToProps, mapDispatchToProps } from './App';
 import * as mock from '../../mockData/mockData';
 import * as Actions from '../../Actions';
+import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
+import * as firebase from '../../firebase/auth';
+jest.mock('../../Api/ApiCalls/fetchRandomRecipes');
 
-// describe('App', () => {
-//   let wrapper;
-//   let recipes;
-//   let postRecipes;
+describe('App', () => {
+  let wrapper;
+  let mockpostRecipes = jest.fn();
+  let mocklogoutUser = jest.fn();
+  let mockUser = {email:'dog.gmail.com', uid: 24};
+  let mockHistory = {push: jest.fn()};
 
-//   beforeEach (() => {
-//     recipes = mock.mockRecipe;
-//     postRecipes = jest.fn();
-//     wrapper = shallow(<App 
-//       recipes={recipes} 
-//       postRecipes={postRecipes} 
-//     />, {
-//       disableLifecycleMethods: false
-//     });
-//   });
+  beforeEach (() => {
+    wrapper = shallow(<App 
+      postRecipes={mockpostRecipes} 
+      logoutUser={mocklogoutUser}
+      user={mockUser}
+      history={mockHistory}
+    />, {
+      disableLifecycleMethods: false
+    });
+  });
 
-//   it('should match the snapshot', () => {
-//     expect(wrapper).toMatchSnapshot();
-//   });
-// });
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call fetchRandomRecipes', () => {
+    expect(fetchRandomRecipes).toHaveBeenCalled();
+  });
+
+  it('should call postRecipes on componentDidMount', () => {
+    expect(mockpostRecipes).toHaveBeenCalledWith(mock.recipes);
+  });
+
+  it('should call doSignOut on handleLogout', () => {
+    firebase.doSignOut = jest.fn();
+    wrapper.instance().handleLogout();
+    expect(firebase.doSignOut).toHaveBeenCalled();
+  });
+
+  it('should call history.push with the correct params', () => {
+    wrapper.instance().handleLogout();
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
+  });
+
+  it('should call logoutUser on handleLogout', () => {
+    expect(mocklogoutUser).toHaveBeenCalled();
+  });
+});
+
+describe('mapStateToProps', () => {
+  const state = {user: {email:'dog@gmail.com', uid: 24}};
+  const expected = { email: 'dog@gmail.com', uid: 24 };
+  const mapped = mapStateToProps(state);
+  expect(mapped.user).toEqual(expected);
+});
 
 describe('mapDispatchToProps', () => {
   it('should call dispatch with the correct params in postRecipes', () => {
