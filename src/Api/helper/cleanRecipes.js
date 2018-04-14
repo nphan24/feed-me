@@ -1,6 +1,12 @@
 export const cleanRecipes = mealsArray => {
   const cleanedRecipes = mealsArray.map(meal => {
-    const { recipeName, imageUrlsBySize, ingredients, totalTimeInSeconds, id } = meal;
+    const { 
+      recipeName, 
+      imageUrlsBySize, 
+      ingredients, 
+      totalTimeInSeconds, 
+      id 
+    } = meal;
     
     return { 
       name: recipeName, 

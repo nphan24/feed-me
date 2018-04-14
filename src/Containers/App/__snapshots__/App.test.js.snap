@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    logoutUser={[Function]}
+    postRecipes={[Function]}
+    user={
+        Object {
+            "email": "dog.gmail.com",
+            "uid": 24,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <header
+          className="App-header"
+>
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="App-title"
+                    to="/"
+          >
+                    <img
+                              className="top-icon"
+                              src="top-icon.svg"
+                    />
+                    Feed-Me
+          </NavLink>
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="view-favorites-button"
+                    to="/favorites"
+          >
+                    View Favorites
+          </NavLink>
+          <button
+                    className="logout-button"
+                    onClick={[Function]}
+          >
+                    Logout
+          </button>
+          <Connect(DropDown) />
+</header>,
+        <withRouter(Connect(Component)) />,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="App-title"
+              to="/"
+>
+              <img
+                            className="top-icon"
+                            src="top-icon.svg"
+              />
+              Feed-Me
+</NavLink>,
+            <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="view-favorites-button"
+              to="/favorites"
+>
+              View Favorites
+</NavLink>,
+            <button
+              className="logout-button"
+              onClick={[Function]}
+>
+              Logout
+</button>,
+            false,
+            <Connect(DropDown) />,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": Array [
+                <img
+                  className="top-icon"
+                  src="top-icon.svg"
+/>,
+                "Feed-Me",
+              ],
+              "className": "App-title",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "top-icon",
+                  "src": "top-icon.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "Feed-Me",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": "View Favorites",
+              "className": "view-favorites-button",
+              "to": "/favorites",
+            },
+            "ref": null,
+            "rendered": "View Favorites",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Logout",
+              "className": "logout-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Logout",
+            "type": "button",
+          },
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header
+            className="App-header"
+>
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        className="App-title"
+                        to="/"
+            >
+                        <img
+                                    className="top-icon"
+                                    src="top-icon.svg"
+                        />
+                        Feed-Me
+            </NavLink>
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        className="view-favorites-button"
+                        to="/favorites"
+            >
+                        View Favorites
+            </NavLink>
+            <button
+                        className="logout-button"
+                        onClick={[Function]}
+            >
+                        Logout
+            </button>
+            <Connect(DropDown) />
+</header>,
+          <withRouter(Connect(Component)) />,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
+                className="App-title"
+                to="/"
+>
+                <img
+                                className="top-icon"
+                                src="top-icon.svg"
+                />
+                Feed-Me
+</NavLink>,
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
+                className="view-favorites-button"
+                to="/favorites"
+>
+                View Favorites
+</NavLink>,
+              <button
+                className="logout-button"
+                onClick={[Function]}
+>
+                Logout
+</button>,
+              false,
+              <Connect(DropDown) />,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "ariaCurrent": "true",
+                "children": Array [
+                  <img
+                    className="top-icon"
+                    src="top-icon.svg"
+/>,
+                  "Feed-Me",
+                ],
+                "className": "App-title",
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "top-icon",
+                    "src": "top-icon.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "Feed-Me",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "ariaCurrent": "true",
+                "children": "View Favorites",
+                "className": "view-favorites-button",
+                "to": "/favorites",
+              },
+              "ref": null,
+              "rendered": "View Favorites",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Logout",
+                "className": "logout-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Logout",
+              "type": "button",
+            },
+            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": false,
+  },
+}
+`;

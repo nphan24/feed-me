@@ -12,6 +12,17 @@ describe('postRecipes', () => {
   });
 });
 
+describe('replaceRecipes', () => {
+  it('creates a type of REPLACE_RECIPES', () => {
+    const recipes = mock.mockRecipe;
+    const expected = {
+      type: 'REPLACE_RECIPES',
+      recipes
+    };
+    expect(Actions.replaceRecipes(recipes)).toEqual(expected);
+  });
+});
+
 describe('addFavorite', () => {
   it('creates a type of ADD_FAVORITE', () => {
     const recipe = mock.mockRecipe;
@@ -31,5 +42,32 @@ describe('removeFavorite', () => {
       id
     };
     expect(Actions.removeFavorite(id)).toEqual(expected);
+  });
+});
+
+describe('addUser', () => {
+  it('creates a type of ADD_USER', () => {
+    const user = {
+      name:'ngoc', 
+      password:'n@gmail.com'
+    };
+    const expected = {
+      type: 'ADD_USER',
+      user
+    };
+    expect(Actions.addUser(user)).toEqual(expected);
+  });
+});
+
+describe('logoutUser', () => {
+  it('creates a type of LOGOUT_USER', () => {
+    const user = {
+      name: 'ngoc',
+      password: 'n@gmail.com'
+    };
+    const expected = {
+      type: 'LOGOUT_USER'
+    };
+    expect(Actions.logoutUser(user)).toEqual(expected);
   });
 });
