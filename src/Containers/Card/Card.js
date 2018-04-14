@@ -7,7 +7,7 @@ import './Card.css';
 export const Card = ({
   recipe, 
   favorites, 
-  addFavorite, 
+  addFavorite,
   removeFavorite 
 }) => {
   const { name, image, totaltime, source } = recipe;

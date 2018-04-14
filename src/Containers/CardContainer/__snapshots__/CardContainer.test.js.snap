@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardDontainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    favorites={
+        Array [
+            Object {
+              "id": 2,
+              "image": "url",
+              "name": "pasta",
+              "totalTime": "30",
+            },
+          ]
+    }
+    location={
+        Object {
+            "pathname": "favorites",
+          }
+    }
+    recipes={
+        Array [
+            Object {
+              "id": 2,
+              "image": "url",
+              "name": "pasta",
+              "totalTime": "30",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Switch>
+        <Route
+                exact={true}
+                path="/"
+                render={[Function]}
+        />
+        <Route
+                exact={true}
+                path="/favorites"
+                render={[Function]}
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+        />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/signup"
+        />
+</Switch>,
+      "className": "card-container-section",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Route
+            exact={true}
+            path="/"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/favorites"
+            render={[Function]}
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/signup"
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/favorites",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/signup",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Switch>
+          <Route
+                    exact={true}
+                    path="/"
+                    render={[Function]}
+          />
+          <Route
+                    exact={true}
+                    path="/favorites"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/login"
+          />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/signup"
+          />
+</Switch>,
+        "className": "card-container-section",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Route
+              exact={true}
+              path="/"
+              render={[Function]}
+/>,
+            <Route
+              exact={true}
+              path="/favorites"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/signup"
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/favorites",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/login",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/signup",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
