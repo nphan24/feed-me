@@ -12,7 +12,8 @@ export class DropDown extends Component {
 
   render() {
     return <div>
-      <select id="dropdown" onChange={ this.handleChange}>
+      <select id="dropdown" onChange=
+        {this.handleChange}>
         <option value="Categories">Categories</option>
         <option value="breakfast">breakfast</option>
         <option value="lunch">lunch</option>
