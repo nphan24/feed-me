@@ -1,0 +1,625 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignUp
+    addUser={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    user={
+        Object {
+            "email": "dog@gmail.com",
+            "password": "dogdog",
+            "username": "dog",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <form
+          className="signup-form"
+          onSubmit={[Function]}
+>
+          <h2
+                    className="signup-comment"
+          >
+                    Create New Account
+          </h2>
+          <label>
+                    <input
+                              className="signup-field"
+                              name="username"
+                              onChange={[Function]}
+                              placeholder="username"
+                              type="text"
+                              value=""
+                    />
+                    <input
+                              className="signup-field"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="Email"
+                              type="email"
+                              value=""
+                    />
+                    <input
+                              className="signup-field"
+                              name="passwordOne"
+                              onChange={[Function]}
+                              placeholder="Password"
+                              type="password"
+                              value=""
+                    />
+                    <input
+                              className="signup-field bottom-input"
+                              name="passwordTwo"
+                              onChange={[Function]}
+                              placeholder="Confirm Password"
+                              type="password"
+                              value=""
+                    />
+                    <button
+                              className="signup-submit-button"
+                              disabled={true}
+                              type="submit"
+                    >
+                              Sign Up
+                    </button>
+          </label>
+</form>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="login-link"
+          to="/login"
+>
+          Have an account? Login!
+</NavLink>,
+        false,
+      ],
+      "className": "signup-component",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="signup-comment"
+>
+              Create New Account
+</h2>,
+            <label>
+              <input
+                            className="signup-field"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="username"
+                            type="text"
+                            value=""
+              />
+              <input
+                            className="signup-field"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="Email"
+                            type="email"
+                            value=""
+              />
+              <input
+                            className="signup-field"
+                            name="passwordOne"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
+              />
+              <input
+                            className="signup-field bottom-input"
+                            name="passwordTwo"
+                            onChange={[Function]}
+                            placeholder="Confirm Password"
+                            type="password"
+                            value=""
+              />
+              <button
+                            className="signup-submit-button"
+                            disabled={true}
+                            type="submit"
+              >
+                            Sign Up
+              </button>
+</label>,
+          ],
+          "className": "signup-form",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Create New Account",
+              "className": "signup-comment",
+            },
+            "ref": null,
+            "rendered": "Create New Account",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="signup-field"
+                  name="username"
+                  onChange={[Function]}
+                  placeholder="username"
+                  type="text"
+                  value=""
+/>,
+                <input
+                  className="signup-field"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="Email"
+                  type="email"
+                  value=""
+/>,
+                <input
+                  className="signup-field"
+                  name="passwordOne"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+/>,
+                <input
+                  className="signup-field bottom-input"
+                  name="passwordTwo"
+                  onChange={[Function]}
+                  placeholder="Confirm Password"
+                  type="password"
+                  value=""
+/>,
+                <button
+                  className="signup-submit-button"
+                  disabled={true}
+                  type="submit"
+>
+                  Sign Up
+</button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "signup-field",
+                  "name": "username",
+                  "onChange": [Function],
+                  "placeholder": "username",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "signup-field",
+                  "name": "email",
+                  "onChange": [Function],
+                  "placeholder": "Email",
+                  "type": "email",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "signup-field",
+                  "name": "passwordOne",
+                  "onChange": [Function],
+                  "placeholder": "Password",
+                  "type": "password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "signup-field bottom-input",
+                  "name": "passwordTwo",
+                  "onChange": [Function],
+                  "placeholder": "Confirm Password",
+                  "type": "password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign Up",
+                  "className": "signup-submit-button",
+                  "disabled": true,
+                  "type": "submit",
+                },
+                "ref": null,
+                "rendered": "Sign Up",
+                "type": "button",
+              },
+            ],
+            "type": "label",
+          },
+        ],
+        "type": "form",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "Have an account? Login!",
+          "className": "login-link",
+          "to": "/login",
+        },
+        "ref": null,
+        "rendered": "Have an account? Login!",
+        "type": [Function],
+      },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <form
+            className="signup-form"
+            onSubmit={[Function]}
+>
+            <h2
+                        className="signup-comment"
+            >
+                        Create New Account
+            </h2>
+            <label>
+                        <input
+                                    className="signup-field"
+                                    name="username"
+                                    onChange={[Function]}
+                                    placeholder="username"
+                                    type="text"
+                                    value=""
+                        />
+                        <input
+                                    className="signup-field"
+                                    name="email"
+                                    onChange={[Function]}
+                                    placeholder="Email"
+                                    type="email"
+                                    value=""
+                        />
+                        <input
+                                    className="signup-field"
+                                    name="passwordOne"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    type="password"
+                                    value=""
+                        />
+                        <input
+                                    className="signup-field bottom-input"
+                                    name="passwordTwo"
+                                    onChange={[Function]}
+                                    placeholder="Confirm Password"
+                                    type="password"
+                                    value=""
+                        />
+                        <button
+                                    className="signup-submit-button"
+                                    disabled={true}
+                                    type="submit"
+                        >
+                                    Sign Up
+                        </button>
+            </label>
+</form>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="login-link"
+            to="/login"
+>
+            Have an account? Login!
+</NavLink>,
+          false,
+        ],
+        "className": "signup-component",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="signup-comment"
+>
+                Create New Account
+</h2>,
+              <label>
+                <input
+                                className="signup-field"
+                                name="username"
+                                onChange={[Function]}
+                                placeholder="username"
+                                type="text"
+                                value=""
+                />
+                <input
+                                className="signup-field"
+                                name="email"
+                                onChange={[Function]}
+                                placeholder="Email"
+                                type="email"
+                                value=""
+                />
+                <input
+                                className="signup-field"
+                                name="passwordOne"
+                                onChange={[Function]}
+                                placeholder="Password"
+                                type="password"
+                                value=""
+                />
+                <input
+                                className="signup-field bottom-input"
+                                name="passwordTwo"
+                                onChange={[Function]}
+                                placeholder="Confirm Password"
+                                type="password"
+                                value=""
+                />
+                <button
+                                className="signup-submit-button"
+                                disabled={true}
+                                type="submit"
+                >
+                                Sign Up
+                </button>
+</label>,
+            ],
+            "className": "signup-form",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Create New Account",
+                "className": "signup-comment",
+              },
+              "ref": null,
+              "rendered": "Create New Account",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    className="signup-field"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="username"
+                    type="text"
+                    value=""
+/>,
+                  <input
+                    className="signup-field"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Email"
+                    type="email"
+                    value=""
+/>,
+                  <input
+                    className="signup-field"
+                    name="passwordOne"
+                    onChange={[Function]}
+                    placeholder="Password"
+                    type="password"
+                    value=""
+/>,
+                  <input
+                    className="signup-field bottom-input"
+                    name="passwordTwo"
+                    onChange={[Function]}
+                    placeholder="Confirm Password"
+                    type="password"
+                    value=""
+/>,
+                  <button
+                    className="signup-submit-button"
+                    disabled={true}
+                    type="submit"
+>
+                    Sign Up
+</button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "signup-field",
+                    "name": "username",
+                    "onChange": [Function],
+                    "placeholder": "username",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "signup-field",
+                    "name": "email",
+                    "onChange": [Function],
+                    "placeholder": "Email",
+                    "type": "email",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "signup-field",
+                    "name": "passwordOne",
+                    "onChange": [Function],
+                    "placeholder": "Password",
+                    "type": "password",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "signup-field bottom-input",
+                    "name": "passwordTwo",
+                    "onChange": [Function],
+                    "placeholder": "Confirm Password",
+                    "type": "password",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Sign Up",
+                    "className": "signup-submit-button",
+                    "disabled": true,
+                    "type": "submit",
+                  },
+                  "ref": null,
+                  "rendered": "Sign Up",
+                  "type": "button",
+                },
+              ],
+              "type": "label",
+            },
+          ],
+          "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "Have an account? Login!",
+            "className": "login-link",
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "Have an account? Login!",
+          "type": [Function],
+        },
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

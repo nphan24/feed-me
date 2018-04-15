@@ -3,11 +3,14 @@ import {Login, mapStateToProps, mapDispatchToProps} from './Login';
 import { shallow } from 'enzyme';
 import * as mock from '../../mockData/mockData';
 import * as Actions from '../../Actions';
+import * as firebase from '../../firebase/auth';
 import { auth } from '../../firebase';
 
 describe('Login', () => {
   let wrapper;
-  let mockaddUser;
+  let mockaddUser = jest.fn();
+  let mockUser = mock.mockUser;
+  let mockHistory = { push: jest.fn() };
 
   beforeEach(() => {
     mockaddUser = jest.fn();
@@ -15,6 +18,8 @@ describe('Login', () => {
     wrapper = shallow (
       <Login 
         addUser = {mockaddUser}
+        user = {mockUser}
+        history= {mockHistory}
       />
     );
   });
@@ -29,11 +34,31 @@ describe('Login', () => {
     expect(wrapper.state('dog')).toEqual('dog@gmail');
   });
 
-  // it('should call addUser on handleSubmit', async () => {
-  //   const event = { preventDefault: jest.fn() };
-  //   await wrapper.instance().handleSubmit(event);
-  //   expect(mockaddUser).toHaveBeenCalled();
-  // });
+  it('should call login on handleSubmit', () => {
+    const event = { preventDefault: jest.fn() };
+    firebase.login = jest.fn();
+    wrapper.instance().handleSubmit(event);
+    expect(firebase.login).toHaveBeenCalled();
+  });
+
+  it('should call addUser on handleSubmit', () => {
+    // const event = { preventDefault: jest.fn() };
+    // wrapper.instance().handleSubmit(event);
+    // expect(mockaddUser).toHaveBeenCalledWith(mockUser);
+  }); 
+
+  it('should set state back to its default state', () => {
+
+  });
+
+  it('should call history.push with the correct params', () => {
+    // wrapper.instance().handleSubmit();
+    // expect(mockHistory.push).toHaveBeenCalledWith('/');
+  });
+
+  it('should state the state to an error if the login to firebase fails', () => {
+
+  });
 });
 
 describe('mapStateToProps', () => {
