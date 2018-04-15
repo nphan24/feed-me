@@ -71,3 +71,14 @@ describe('logoutUser', () => {
     expect(Actions.logoutUser(user)).toEqual(expected);
   });
 });
+
+describe('promptSignIn', () => {
+  it('creates a type of PROMPT_SIGNIN', () => {
+    const error = 'error';
+    const expected = {
+      type: 'PROMPT_SIGNIN',
+      error
+    };
+    expect(Actions.promptSignIn(error)).toEqual(expected);
+  });
+});

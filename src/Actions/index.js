@@ -26,3 +26,8 @@ export const addUser = user => ({
 export const logoutUser = () => ({
   type: 'LOGOUT_USER'
 });
+
+export const promptSignIn = error => ({
+  type: 'PROMPT_SIGNIN',
+  error
+});

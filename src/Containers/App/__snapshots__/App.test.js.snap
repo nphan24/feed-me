@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    error="Please sign in to view Favorites"
     history={
         Object {
             "push": [Function],
@@ -12,6 +13,7 @@ ShallowWrapper {
     }
     logoutUser={[Function]}
     postRecipes={[Function]}
+    promptSignIn={[Function]}
     user={
         Object {
             "email": "dog.gmail.com",
@@ -63,6 +65,7 @@ ShallowWrapper {
           </button>
           <Connect(DropDown) />
 </header>,
+        false,
         <withRouter(Connect(Component)) />,
       ],
       "className": "App",
@@ -101,6 +104,7 @@ ShallowWrapper {
 >
               Logout
 </button>,
+            false,
             false,
             <Connect(DropDown) />,
           ],
@@ -172,6 +176,7 @@ ShallowWrapper {
             "type": "button",
           },
           false,
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -184,6 +189,7 @@ ShallowWrapper {
         ],
         "type": "header",
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -234,6 +240,7 @@ ShallowWrapper {
             </button>
             <Connect(DropDown) />
 </header>,
+          false,
           <withRouter(Connect(Component)) />,
         ],
         "className": "App",
@@ -272,6 +279,7 @@ ShallowWrapper {
 >
                 Logout
 </button>,
+              false,
               false,
               <Connect(DropDown) />,
             ],
@@ -343,6 +351,7 @@ ShallowWrapper {
               "type": "button",
             },
             false,
+            false,
             Object {
               "instance": null,
               "key": undefined,
@@ -355,6 +364,7 @@ ShallowWrapper {
           ],
           "type": "header",
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,
