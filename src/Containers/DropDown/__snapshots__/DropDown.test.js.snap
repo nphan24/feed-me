@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DropDown
+    replaceRecipes={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <select
+        id="dropdown"
+        onChange={[Function]}
+>
+        <option
+                value="Categories"
+        >
+                Categories
+        </option>
+        <option
+                value="breakfast"
+        >
+                breakfast
+        </option>
+        <option
+                value="lunch"
+        >
+                lunch
+        </option>
+        <option
+                value="dinner"
+        >
+                dinner
+        </option>
+        <option
+                value="appetizer"
+        >
+                appetizer
+        </option>
+        <option
+                value="chicken"
+        >
+                chicken
+        </option>
+        <option
+                value="beef"
+        >
+                beef
+        </option>
+        <option
+                value="lamb"
+        >
+                lamb
+        </option>
+        <option
+                value="seafood"
+        >
+                seafood
+        </option>
+        <option
+                value="pork"
+        >
+                pork
+        </option>
+        <option
+                value="smoothies"
+        >
+                smoothies
+        </option>
+        <option
+                value="snacks"
+        >
+                snacks
+        </option>
+</select>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <option
+            value="Categories"
+>
+            Categories
+</option>,
+          <option
+            value="breakfast"
+>
+            breakfast
+</option>,
+          <option
+            value="lunch"
+>
+            lunch
+</option>,
+          <option
+            value="dinner"
+>
+            dinner
+</option>,
+          <option
+            value="appetizer"
+>
+            appetizer
+</option>,
+          <option
+            value="chicken"
+>
+            chicken
+</option>,
+          <option
+            value="beef"
+>
+            beef
+</option>,
+          <option
+            value="lamb"
+>
+            lamb
+</option>,
+          <option
+            value="seafood"
+>
+            seafood
+</option>,
+          <option
+            value="pork"
+>
+            pork
+</option>,
+          <option
+            value="smoothies"
+>
+            smoothies
+</option>,
+          <option
+            value="snacks"
+>
+            snacks
+</option>,
+        ],
+        "id": "dropdown",
+        "onChange": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Categories",
+            "value": "Categories",
+          },
+          "ref": null,
+          "rendered": "Categories",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "breakfast",
+            "value": "breakfast",
+          },
+          "ref": null,
+          "rendered": "breakfast",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "lunch",
+            "value": "lunch",
+          },
+          "ref": null,
+          "rendered": "lunch",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "dinner",
+            "value": "dinner",
+          },
+          "ref": null,
+          "rendered": "dinner",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "appetizer",
+            "value": "appetizer",
+          },
+          "ref": null,
+          "rendered": "appetizer",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "chicken",
+            "value": "chicken",
+          },
+          "ref": null,
+          "rendered": "chicken",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "beef",
+            "value": "beef",
+          },
+          "ref": null,
+          "rendered": "beef",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "lamb",
+            "value": "lamb",
+          },
+          "ref": null,
+          "rendered": "lamb",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "seafood",
+            "value": "seafood",
+          },
+          "ref": null,
+          "rendered": "seafood",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "pork",
+            "value": "pork",
+          },
+          "ref": null,
+          "rendered": "pork",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "smoothies",
+            "value": "smoothies",
+          },
+          "ref": null,
+          "rendered": "smoothies",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "snacks",
+            "value": "snacks",
+          },
+          "ref": null,
+          "rendered": "snacks",
+          "type": "option",
+        },
+      ],
+      "type": "select",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <select
+          id="dropdown"
+          onChange={[Function]}
+>
+          <option
+                    value="Categories"
+          >
+                    Categories
+          </option>
+          <option
+                    value="breakfast"
+          >
+                    breakfast
+          </option>
+          <option
+                    value="lunch"
+          >
+                    lunch
+          </option>
+          <option
+                    value="dinner"
+          >
+                    dinner
+          </option>
+          <option
+                    value="appetizer"
+          >
+                    appetizer
+          </option>
+          <option
+                    value="chicken"
+          >
+                    chicken
+          </option>
+          <option
+                    value="beef"
+          >
+                    beef
+          </option>
+          <option
+                    value="lamb"
+          >
+                    lamb
+          </option>
+          <option
+                    value="seafood"
+          >
+                    seafood
+          </option>
+          <option
+                    value="pork"
+          >
+                    pork
+          </option>
+          <option
+                    value="smoothies"
+          >
+                    smoothies
+          </option>
+          <option
+                    value="snacks"
+          >
+                    snacks
+          </option>
+</select>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <option
+              value="Categories"
+>
+              Categories
+</option>,
+            <option
+              value="breakfast"
+>
+              breakfast
+</option>,
+            <option
+              value="lunch"
+>
+              lunch
+</option>,
+            <option
+              value="dinner"
+>
+              dinner
+</option>,
+            <option
+              value="appetizer"
+>
+              appetizer
+</option>,
+            <option
+              value="chicken"
+>
+              chicken
+</option>,
+            <option
+              value="beef"
+>
+              beef
+</option>,
+            <option
+              value="lamb"
+>
+              lamb
+</option>,
+            <option
+              value="seafood"
+>
+              seafood
+</option>,
+            <option
+              value="pork"
+>
+              pork
+</option>,
+            <option
+              value="smoothies"
+>
+              smoothies
+</option>,
+            <option
+              value="snacks"
+>
+              snacks
+</option>,
+          ],
+          "id": "dropdown",
+          "onChange": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Categories",
+              "value": "Categories",
+            },
+            "ref": null,
+            "rendered": "Categories",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "breakfast",
+              "value": "breakfast",
+            },
+            "ref": null,
+            "rendered": "breakfast",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "lunch",
+              "value": "lunch",
+            },
+            "ref": null,
+            "rendered": "lunch",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "dinner",
+              "value": "dinner",
+            },
+            "ref": null,
+            "rendered": "dinner",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "appetizer",
+              "value": "appetizer",
+            },
+            "ref": null,
+            "rendered": "appetizer",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "chicken",
+              "value": "chicken",
+            },
+            "ref": null,
+            "rendered": "chicken",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "beef",
+              "value": "beef",
+            },
+            "ref": null,
+            "rendered": "beef",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "lamb",
+              "value": "lamb",
+            },
+            "ref": null,
+            "rendered": "lamb",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "seafood",
+              "value": "seafood",
+            },
+            "ref": null,
+            "rendered": "seafood",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "pork",
+              "value": "pork",
+            },
+            "ref": null,
+            "rendered": "pork",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "smoothies",
+              "value": "smoothies",
+            },
+            "ref": null,
+            "rendered": "smoothies",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "snacks",
+              "value": "snacks",
+            },
+            "ref": null,
+            "rendered": "snacks",
+            "type": "option",
+          },
+        ],
+        "type": "select",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
