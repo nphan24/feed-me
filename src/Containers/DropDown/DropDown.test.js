@@ -18,8 +18,9 @@ describe('DropDown', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call fetchRandomRecipes on handleChange', () => {
-    // expect(fetchRandomRecipes).toHaveBeenCalled();
+  it('should call fetchRandomRecipes on handleChange', async () => {
+    // wrapper.instance().handleChange();
+    // await expect(fetchRandomRecipes('chicken')).toHaveBeenCalled();
   });
 
   it('should call replaceRecipes on handleChange', () => {

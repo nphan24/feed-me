@@ -3,6 +3,7 @@ import './DropDown.css';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import { connect } from 'react-redux';
 import * as Actions from '../../Actions';
+import PropTypes from 'prop-types';
 export class DropDown extends Component {
 
   handleChange = async (event) => {
@@ -34,5 +35,9 @@ export class DropDown extends Component {
 export const mapDispatchToProps = dispatch => ({
   replaceRecipes: recipes => dispatch(Actions.replaceRecipes(recipes))
 });
+
+DropDown.propTypes = {
+  replaceRecipes: PropTypes.func
+};
 
 export default (connect(null, mapDispatchToProps)(DropDown));
