@@ -22,7 +22,10 @@ describe('fetchRecipeSource', ()=> {
 
   it('should return an object', () => {
     const mockrecipesWithoutSource = [{ id: 2 }];
-    const expected = [{ id: 2, source: 'https://www.onceuponachef.com/recipes/potatoes-au-gratin.html' }];
+    const expected = [{ 
+      id: 2, 
+      source: 'https://www.onceuponachef.com/recipes/potatoes-au-gratin.html' 
+    }];
     expect(fetchRecipeSource(mockrecipesWithoutSource)).resolves.toEqual(expected);
   });
 

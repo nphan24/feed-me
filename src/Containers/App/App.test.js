@@ -16,7 +16,7 @@ describe('App', () => {
   let mockPromptSignIn = jest.fn();
   let mockError = 'Please sign in to view Favorites';
 
-  beforeEach (() => {
+  beforeEach(() => {
     wrapper = shallow(<App 
       postRecipes={mockpostRecipes} 
       logoutUser={mocklogoutUser}

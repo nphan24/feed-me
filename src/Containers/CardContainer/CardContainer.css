@@ -24,3 +24,9 @@
 .nofavorites-gif {
   margin-left: 110px;
 }
+
+@media only screen and (max-width: 420px) {
+ .nofavorites-gif {
+   margin-left: 40px;
+ }
+}

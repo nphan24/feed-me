@@ -75,7 +75,7 @@ export class Login extends Component {
         </form>
         <NavLink 
           to={routes.SIGN_UP} 
-          className="signin-route">Don't have an account? Sign Up!
+          className="signin-route">Don&apos;t have an account? Sign Up!
         </NavLink>
         {error && <p className="login-error">{error.message}</p>}
       </div>
