@@ -94,3 +94,13 @@
   float: right;
   font-size: 1.2em;
 }
+
+@media only screen and (max-width: 530px) {
+  .App-header {
+    height: 180px;
+  }
+
+  .user-email {
+    margin-bottom: 5px;
+  }
+}
