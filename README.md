@@ -20,8 +20,8 @@ This application fetches recipes from the Yummly API and displays the recipes. T
 You will need a key and an applcation Id from the [Yummly Api] (https://developer.yummly.com/). The key and applicationId needs to be stored in a file within src/Api/ApiCalls/apiKey.js under const apiKey and const applicationId.
 
 ## Project Screen Shots
-![Wireframe](src/assets/Feed-Me Wireframe-2.png)
-![Main Page](src/assets/fee-me.png)
+![Wireframe](src/assets/wireframe.png)
+![Main Page](src/assets/feed-me.png)
 
 ## Contributors
 
