@@ -15,7 +15,7 @@ describe('Login', () => {
   beforeEach(() => {
     mockaddUser = jest.fn();
 
-    wrapper = shallow (
+    wrapper = shallow(
       <Login 
         addUser = {mockaddUser}
         user = {mockUser}
