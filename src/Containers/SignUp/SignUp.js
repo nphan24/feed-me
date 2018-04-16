@@ -31,14 +31,16 @@ export class SignUp extends Component {
       email,
       passwordOne
     } = this.state;
-
+    console.log('hheelekjshfdh');
     try {
       const authUser = await auth.signUp(email, passwordOne);
+      console.log('auth', authUser);
       const user = {
         username,
         email: authUser.email,
         uid: authUser.uid
       };
+      console.log('user', user);
       this.props.addUser(user);
       this.setState({
         username: '',

@@ -56,7 +56,7 @@
   serif;
   color: white;
   background-color: #2f97ef;
-  float: right;
+  margin-left: 100px;
 }
 
 .logout-button:hover {
@@ -84,4 +84,12 @@
   font-family: 'PT Serif',
   serif;
   margin: 0;
+}
+
+.user-email {
+  margin: 0;
+}
+
+.logout-welcome {
+  float: right;
 }

@@ -45,16 +45,20 @@ export class App extends Component {
           </NavLink>
           }
           {this.props.user.email && 
-          <button  className="logout-button" 
-            onClick={this.handleLogout}>
-            Logout
-          </button>}
+          <div className='logout-welcome'>
+            <button  className="logout-button" 
+              onClick={this.handleLogout}>Logout
+            </button>
+            <p className='user-email'>Welcome: {this.props.user.email}</p>
+          </div>}
           {!this.props.user.email &&
           <button 
             onClick={this.handleFavorites}
             className='favorites-button-not-signedin'>
             View Favorites</button>}
           {!this.props.user.email && <Nav />}
+          {/* {this.props.user.email && 
+          <p className='user-email'>Welcome: {this.props.user.email}</p>} */}
           <DropDown />
         </header>
         {this.props.error && 

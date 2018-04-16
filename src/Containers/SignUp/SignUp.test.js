@@ -5,7 +5,7 @@ import * as mock from '../../mockData/mockData';
 import * as Actions from '../../Actions';
 import * as firebase from '../../firebase/auth';
 // import { auth } from '../../firebase/auth';
-jest.mock('../../firebase/auth');
+// jest.mock('../../firebase/auth');
 
 describe('SignUp', () => {
   let wrapper;
@@ -32,19 +32,23 @@ describe('SignUp', () => {
   });
 
   it('should call signUp on handlesubmit', () => {
-    // const event = { preventDefault: jest.fn() };
-    // firebase = {signUp: jest.fn()};
-    // wrapper.instance().handleSubmit(event);
-    // expect(firebase.signUp).toHaveBeenCalled();
-  });
-
-  it('should grab user information from firebase and create a new user with that information', () => {
-
+    const event = { preventDefault: jest.fn() };
+    firebase.signUp = jest.fn().mockImplementation(()=> Promise.resolve({
+      email: 'dog@gmail.com', uid: 24
+    })
+    );
+    const email = 'dog@gmail';
+    const passwordOne= '123456';
+    wrapper.instance().handleSubmit(event);
+    expect(firebase.signUp).toHaveBeenCalled();
   });
 
   it('should call addUser in handleSubmit', () => {
-    // wrapper.instance().handleSubmit();
-    // expect(mockaddUser).toHaveBeenCalled();
+    const event = { preventDefault: jest.fn() };
+    // wrapper.setState({username: 'Amanda', email: '', passwordOne: '', passwordTwo: ''});
+    wrapper.instance().handleSubmit(event);
+    const user = { email: 'dog@gmail.com', uid: 24, username: '' };
+    expect(mockaddUser).toHaveBeenCalledWith(user);
   });
 
   it('should set state back to its default values', () => {
