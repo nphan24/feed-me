@@ -13,6 +13,7 @@
   visibility: center;
   font-family: 'PT Serif',
   serif;
+  display: block;
 }
 
 .top-icon {

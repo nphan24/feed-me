@@ -20,6 +20,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <select
+        className="dropdown-menu"
         id="dropdown"
         onChange={[Function]}
 >
@@ -31,57 +32,62 @@ ShallowWrapper {
         <option
                 value="breakfast"
         >
-                breakfast
+                Breakfast
         </option>
         <option
                 value="lunch"
         >
-                lunch
+                Lunch
         </option>
         <option
                 value="dinner"
         >
-                dinner
+                Dinner
         </option>
         <option
                 value="appetizer"
         >
-                appetizer
+                Appetizer
         </option>
         <option
                 value="chicken"
         >
-                chicken
+                Chicken
         </option>
         <option
                 value="beef"
         >
-                beef
+                Beef
         </option>
         <option
                 value="lamb"
         >
-                lamb
+                Lamb
         </option>
         <option
                 value="seafood"
         >
-                seafood
+                Seafood
         </option>
         <option
                 value="pork"
         >
-                pork
+                Pork
+        </option>
+        <option
+                value="vegetarian"
+        >
+                Vegetarian
         </option>
         <option
                 value="smoothies"
         >
-                smoothies
+                Smoothies
         </option>
         <option
                 value="snacks"
         >
-                snacks
+                Snacks
         </option>
 </select>,
     },
@@ -100,59 +106,65 @@ ShallowWrapper {
           <option
             value="breakfast"
 >
-            breakfast
+            Breakfast
 </option>,
           <option
             value="lunch"
 >
-            lunch
+            Lunch
 </option>,
           <option
             value="dinner"
 >
-            dinner
+            Dinner
 </option>,
           <option
             value="appetizer"
 >
-            appetizer
+            Appetizer
 </option>,
           <option
             value="chicken"
 >
-            chicken
+            Chicken
 </option>,
           <option
             value="beef"
 >
-            beef
+            Beef
 </option>,
           <option
             value="lamb"
 >
-            lamb
+            Lamb
 </option>,
           <option
             value="seafood"
 >
-            seafood
+            Seafood
 </option>,
           <option
             value="pork"
 >
-            pork
+            Pork
+</option>,
+          <option
+            value="vegetarian"
+>
+            Vegetarian
 </option>,
           <option
             value="smoothies"
 >
-            smoothies
+            Smoothies
 </option>,
           <option
             value="snacks"
 >
-            snacks
+            Snacks
 </option>,
         ],
+        "className": "dropdown-menu",
         "id": "dropdown",
         "onChange": [Function],
       },
@@ -175,11 +187,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "breakfast",
+            "children": "Breakfast",
             "value": "breakfast",
           },
           "ref": null,
-          "rendered": "breakfast",
+          "rendered": "Breakfast",
           "type": "option",
         },
         Object {
@@ -187,11 +199,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "lunch",
+            "children": "Lunch",
             "value": "lunch",
           },
           "ref": null,
-          "rendered": "lunch",
+          "rendered": "Lunch",
           "type": "option",
         },
         Object {
@@ -199,11 +211,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "dinner",
+            "children": "Dinner",
             "value": "dinner",
           },
           "ref": null,
-          "rendered": "dinner",
+          "rendered": "Dinner",
           "type": "option",
         },
         Object {
@@ -211,11 +223,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "appetizer",
+            "children": "Appetizer",
             "value": "appetizer",
           },
           "ref": null,
-          "rendered": "appetizer",
+          "rendered": "Appetizer",
           "type": "option",
         },
         Object {
@@ -223,11 +235,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "chicken",
+            "children": "Chicken",
             "value": "chicken",
           },
           "ref": null,
-          "rendered": "chicken",
+          "rendered": "Chicken",
           "type": "option",
         },
         Object {
@@ -235,11 +247,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "beef",
+            "children": "Beef",
             "value": "beef",
           },
           "ref": null,
-          "rendered": "beef",
+          "rendered": "Beef",
           "type": "option",
         },
         Object {
@@ -247,11 +259,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "lamb",
+            "children": "Lamb",
             "value": "lamb",
           },
           "ref": null,
-          "rendered": "lamb",
+          "rendered": "Lamb",
           "type": "option",
         },
         Object {
@@ -259,11 +271,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "seafood",
+            "children": "Seafood",
             "value": "seafood",
           },
           "ref": null,
-          "rendered": "seafood",
+          "rendered": "Seafood",
           "type": "option",
         },
         Object {
@@ -271,11 +283,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "pork",
+            "children": "Pork",
             "value": "pork",
           },
           "ref": null,
-          "rendered": "pork",
+          "rendered": "Pork",
           "type": "option",
         },
         Object {
@@ -283,11 +295,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "smoothies",
+            "children": "Vegetarian",
+            "value": "vegetarian",
+          },
+          "ref": null,
+          "rendered": "Vegetarian",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Smoothies",
             "value": "smoothies",
           },
           "ref": null,
-          "rendered": "smoothies",
+          "rendered": "Smoothies",
           "type": "option",
         },
         Object {
@@ -295,11 +319,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "snacks",
+            "children": "Snacks",
             "value": "snacks",
           },
           "ref": null,
-          "rendered": "snacks",
+          "rendered": "Snacks",
           "type": "option",
         },
       ],
@@ -314,6 +338,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <select
+          className="dropdown-menu"
           id="dropdown"
           onChange={[Function]}
 >
@@ -325,57 +350,62 @@ ShallowWrapper {
           <option
                     value="breakfast"
           >
-                    breakfast
+                    Breakfast
           </option>
           <option
                     value="lunch"
           >
-                    lunch
+                    Lunch
           </option>
           <option
                     value="dinner"
           >
-                    dinner
+                    Dinner
           </option>
           <option
                     value="appetizer"
           >
-                    appetizer
+                    Appetizer
           </option>
           <option
                     value="chicken"
           >
-                    chicken
+                    Chicken
           </option>
           <option
                     value="beef"
           >
-                    beef
+                    Beef
           </option>
           <option
                     value="lamb"
           >
-                    lamb
+                    Lamb
           </option>
           <option
                     value="seafood"
           >
-                    seafood
+                    Seafood
           </option>
           <option
                     value="pork"
           >
-                    pork
+                    Pork
+          </option>
+          <option
+                    value="vegetarian"
+          >
+                    Vegetarian
           </option>
           <option
                     value="smoothies"
           >
-                    smoothies
+                    Smoothies
           </option>
           <option
                     value="snacks"
           >
-                    snacks
+                    Snacks
           </option>
 </select>,
       },
@@ -394,59 +424,65 @@ ShallowWrapper {
             <option
               value="breakfast"
 >
-              breakfast
+              Breakfast
 </option>,
             <option
               value="lunch"
 >
-              lunch
+              Lunch
 </option>,
             <option
               value="dinner"
 >
-              dinner
+              Dinner
 </option>,
             <option
               value="appetizer"
 >
-              appetizer
+              Appetizer
 </option>,
             <option
               value="chicken"
 >
-              chicken
+              Chicken
 </option>,
             <option
               value="beef"
 >
-              beef
+              Beef
 </option>,
             <option
               value="lamb"
 >
-              lamb
+              Lamb
 </option>,
             <option
               value="seafood"
 >
-              seafood
+              Seafood
 </option>,
             <option
               value="pork"
 >
-              pork
+              Pork
+</option>,
+            <option
+              value="vegetarian"
+>
+              Vegetarian
 </option>,
             <option
               value="smoothies"
 >
-              smoothies
+              Smoothies
 </option>,
             <option
               value="snacks"
 >
-              snacks
+              Snacks
 </option>,
           ],
+          "className": "dropdown-menu",
           "id": "dropdown",
           "onChange": [Function],
         },
@@ -469,11 +505,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "breakfast",
+              "children": "Breakfast",
               "value": "breakfast",
             },
             "ref": null,
-            "rendered": "breakfast",
+            "rendered": "Breakfast",
             "type": "option",
           },
           Object {
@@ -481,11 +517,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "lunch",
+              "children": "Lunch",
               "value": "lunch",
             },
             "ref": null,
-            "rendered": "lunch",
+            "rendered": "Lunch",
             "type": "option",
           },
           Object {
@@ -493,11 +529,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "dinner",
+              "children": "Dinner",
               "value": "dinner",
             },
             "ref": null,
-            "rendered": "dinner",
+            "rendered": "Dinner",
             "type": "option",
           },
           Object {
@@ -505,11 +541,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "appetizer",
+              "children": "Appetizer",
               "value": "appetizer",
             },
             "ref": null,
-            "rendered": "appetizer",
+            "rendered": "Appetizer",
             "type": "option",
           },
           Object {
@@ -517,11 +553,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "chicken",
+              "children": "Chicken",
               "value": "chicken",
             },
             "ref": null,
-            "rendered": "chicken",
+            "rendered": "Chicken",
             "type": "option",
           },
           Object {
@@ -529,11 +565,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "beef",
+              "children": "Beef",
               "value": "beef",
             },
             "ref": null,
-            "rendered": "beef",
+            "rendered": "Beef",
             "type": "option",
           },
           Object {
@@ -541,11 +577,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "lamb",
+              "children": "Lamb",
               "value": "lamb",
             },
             "ref": null,
-            "rendered": "lamb",
+            "rendered": "Lamb",
             "type": "option",
           },
           Object {
@@ -553,11 +589,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "seafood",
+              "children": "Seafood",
               "value": "seafood",
             },
             "ref": null,
-            "rendered": "seafood",
+            "rendered": "Seafood",
             "type": "option",
           },
           Object {
@@ -565,11 +601,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "pork",
+              "children": "Pork",
               "value": "pork",
             },
             "ref": null,
-            "rendered": "pork",
+            "rendered": "Pork",
             "type": "option",
           },
           Object {
@@ -577,11 +613,23 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "smoothies",
+              "children": "Vegetarian",
+              "value": "vegetarian",
+            },
+            "ref": null,
+            "rendered": "Vegetarian",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Smoothies",
               "value": "smoothies",
             },
             "ref": null,
-            "rendered": "smoothies",
+            "rendered": "Smoothies",
             "type": "option",
           },
           Object {
@@ -589,11 +637,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "snacks",
+              "children": "Snacks",
               "value": "snacks",
             },
             "ref": null,
-            "rendered": "snacks",
+            "rendered": "Snacks",
             "type": "option",
           },
         ],
