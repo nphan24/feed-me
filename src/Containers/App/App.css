@@ -37,7 +37,6 @@
 .view-favorites-button {
   color: white;
   text-decoration: none;
-  margin: 5px;
   text-align: right;
   display: block;
   font-size: 1.5em;
@@ -51,12 +50,13 @@
 
 .logout-button {
   border: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'PT Serif',
   serif;
   color: white;
   background-color: #2f97ef;
-  margin-left: 100px;
+  margin-left: 145px;
+  margin-bottom: 5px;
 }
 
 .logout-button:hover {
@@ -92,4 +92,5 @@
 
 .logout-welcome {
   float: right;
+  font-size: 1.2em;
 }

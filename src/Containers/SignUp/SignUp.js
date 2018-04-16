@@ -6,6 +6,7 @@ import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
 import PropTypes from 'prop-types';
 import './SignUp.css';
+
 export class SignUp extends Component {
   constructor() {
     super();
@@ -31,16 +32,14 @@ export class SignUp extends Component {
       email,
       passwordOne
     } = this.state;
-    console.log('hheelekjshfdh');
+
     try {
       const authUser = await auth.signUp(email, passwordOne);
-      console.log('auth', authUser);
       const user = {
         username,
         email: authUser.email,
         uid: authUser.uid
       };
-      console.log('user', user);
       this.props.addUser(user);
       this.setState({
         username: '',

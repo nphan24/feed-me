@@ -57,8 +57,6 @@ export class App extends Component {
             className='favorites-button-not-signedin'>
             View Favorites</button>}
           {!this.props.user.email && <Nav />}
-          {/* {this.props.user.email && 
-          <p className='user-email'>Welcome: {this.props.user.email}</p>} */}
           <DropDown />
         </header>
         {this.props.error && 

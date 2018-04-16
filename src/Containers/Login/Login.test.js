@@ -4,11 +4,10 @@ import { shallow } from 'enzyme';
 import * as mock from '../../mockData/mockData';
 import * as Actions from '../../Actions';
 import * as firebase from '../../firebase/auth';
-import { auth } from '../../firebase';
 
 describe('Login', () => {
   let wrapper;
-  let mockaddUser = jest.fn();
+  let mockaddUser;
   let mockUser = mock.mockUser;
   let mockHistory = { push: jest.fn() };
 
@@ -36,28 +35,49 @@ describe('Login', () => {
 
   it('should call login on handleSubmit', () => {
     const event = { preventDefault: jest.fn() };
-    firebase.login = jest.fn();
+
+    firebase.login = jest.fn().mockImplementation(() => Promise.resolve({ 
+      email:'dog@gmail.com', 
+      password: 'dddddd', 
+      uid: 24
+    }));
     wrapper.instance().handleSubmit(event);
     expect(firebase.login).toHaveBeenCalled();
   });
 
-  it('should call addUser on handleSubmit', () => {
-    // const event = { preventDefault: jest.fn() };
-    // wrapper.instance().handleSubmit(event);
-    // expect(mockaddUser).toHaveBeenCalledWith(mockUser);
+  it('should call addUser on handleSubmit', async () => {
+    const event = { preventDefault: jest.fn() };
+
+    await wrapper.instance().handleSubmit(event);
+    const user = { email: 'dog@gmail.com', password: 'dddddd', uid: 24 };
+
+    expect(mockaddUser).toHaveBeenCalledWith(user);
   }); 
 
   it('should set state back to its default state', () => {
+    const event = { preventDefault: jest.fn() };
+    const expected = '';
+
+    wrapper.setState(mock.mockSignupUser);
+    wrapper.instance().handleSubmit(event);
+    expect(wrapper.state('username')).toEqual(expected);
 
   });
 
   it('should call history.push with the correct params', () => {
-    // wrapper.instance().handleSubmit();
-    // expect(mockHistory.push).toHaveBeenCalledWith('/');
+    const event = { preventDefault: jest.fn() };
+
+    wrapper.instance().handleSubmit(event);
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
   });
 
-  it('should state the state to an error if the login to firebase fails', () => {
+  it('should state the state to an error if the login to firebase fails', async () => {
+    const event = { preventDefault: jest.fn() };
 
+    firebase.login = jest.fn().mockImplementation(() => Promise.reject('error')
+    );
+    await wrapper.instance().handleSubmit(event);
+    await expect(wrapper.state('error')).toEqual('error');
   });
 });
 

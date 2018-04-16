@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as routes from '../../constants/routes';
 import { connect } from 'react-redux';
-import { Route, NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
 import PropTypes from 'prop-types';
@@ -33,6 +33,7 @@ export class Login extends Component {
         password: authUser.password,
         uid: authUser.uid 
       };
+
       this.props.addUser(user);
       this.setState({
         email: '',

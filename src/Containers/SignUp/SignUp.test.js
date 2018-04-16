@@ -4,8 +4,6 @@ import { shallow } from 'enzyme';
 import * as mock from '../../mockData/mockData';
 import * as Actions from '../../Actions';
 import * as firebase from '../../firebase/auth';
-// import { auth } from '../../firebase/auth';
-// jest.mock('../../firebase/auth');
 
 describe('SignUp', () => {
   let wrapper;
@@ -33,35 +31,44 @@ describe('SignUp', () => {
 
   it('should call signUp on handlesubmit', () => {
     const event = { preventDefault: jest.fn() };
+    
     firebase.signUp = jest.fn().mockImplementation(()=> Promise.resolve({
-      email: 'dog@gmail.com', uid: 24
-    })
-    );
-    const email = 'dog@gmail';
-    const passwordOne= '123456';
+      email: 'dog@gmail.com', 
+      uid: 24
+    }));
     wrapper.instance().handleSubmit(event);
     expect(firebase.signUp).toHaveBeenCalled();
   });
 
   it('should call addUser in handleSubmit', () => {
     const event = { preventDefault: jest.fn() };
-    // wrapper.setState({username: 'Amanda', email: '', passwordOne: '', passwordTwo: ''});
     wrapper.instance().handleSubmit(event);
     const user = { email: 'dog@gmail.com', uid: 24, username: '' };
+
     expect(mockaddUser).toHaveBeenCalledWith(user);
   });
 
   it('should set state back to its default values', () => {
+    const event = { preventDefault: jest.fn() };
+    const expected = '';
 
+    wrapper.setState(mock.mockSignupUser);
+    wrapper.instance().handleSubmit(event);
+    expect(wrapper.state('username')).toEqual(expected);
   });
 
   it('should call history.push with the correct params', () => {
-    // wrapper.instance().handleSubmit();
-    // expect(mockHistory.push).toHaveBeenCalledWith('/');
+    const event = { preventDefault: jest.fn() };
+    wrapper.instance().handleSubmit(event);
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
   });
 
-  it('should set the state to the error message if firebase fails to retreive a user', () => {
-
+  it('should set the state to the error message if firebase fails to retreive a user', async () => {
+    const event = { preventDefault: jest.fn() };
+    firebase.signUp = jest.fn().mockImplementation(() => Promise.reject('error')
+    );
+    await wrapper.instance().handleSubmit(event);
+    await expect(wrapper.state('error')).toEqual('error');
   });
 });
 
