@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    error="Please sign in to view Favorites"
     history={
         Object {
             "push": [Function],
@@ -12,6 +13,7 @@ ShallowWrapper {
     }
     logoutUser={[Function]}
     postRecipes={[Function]}
+    promptSignIn={[Function]}
     user={
         Object {
             "email": "dog.gmail.com",
@@ -55,14 +57,25 @@ ShallowWrapper {
           >
                     View Favorites
           </NavLink>
-          <button
-                    className="logout-button"
-                    onClick={[Function]}
+          <div
+                    className="logout-welcome"
           >
-                    Logout
-          </button>
+                    <button
+                              className="logout-button"
+                              onClick={[Function]}
+                    >
+                              Logout
+                    </button>
+                    <p
+                              className="user-email"
+                    >
+                              Welcome: 
+                              dog.gmail.com
+                    </p>
+          </div>
           <Connect(DropDown) />
 </header>,
+        false,
         <withRouter(Connect(Component)) />,
       ],
       "className": "App",
@@ -95,12 +108,23 @@ ShallowWrapper {
 >
               View Favorites
 </NavLink>,
-            <button
-              className="logout-button"
-              onClick={[Function]}
+            <div
+              className="logout-welcome"
 >
-              Logout
-</button>,
+              <button
+                            className="logout-button"
+                            onClick={[Function]}
+              >
+                            Logout
+              </button>
+              <p
+                            className="user-email"
+              >
+                            Welcome: 
+                            dog.gmail.com
+              </p>
+</div>,
+            false,
             false,
             <Connect(DropDown) />,
           ],
@@ -163,14 +187,59 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Logout",
-              "className": "logout-button",
-              "onClick": [Function],
+              "children": Array [
+                <button
+                  className="logout-button"
+                  onClick={[Function]}
+>
+                  Logout
+</button>,
+                <p
+                  className="user-email"
+>
+                  Welcome: 
+                  dog.gmail.com
+</p>,
+              ],
+              "className": "logout-welcome",
             },
             "ref": null,
-            "rendered": "Logout",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Logout",
+                  "className": "logout-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Logout",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Welcome: ",
+                    "dog.gmail.com",
+                  ],
+                  "className": "user-email",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Welcome: ",
+                  "dog.gmail.com",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
+          false,
           false,
           Object {
             "instance": null,
@@ -184,6 +253,7 @@ ShallowWrapper {
         ],
         "type": "header",
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -226,14 +296,25 @@ ShallowWrapper {
             >
                         View Favorites
             </NavLink>
-            <button
-                        className="logout-button"
-                        onClick={[Function]}
+            <div
+                        className="logout-welcome"
             >
-                        Logout
-            </button>
+                        <button
+                                    className="logout-button"
+                                    onClick={[Function]}
+                        >
+                                    Logout
+                        </button>
+                        <p
+                                    className="user-email"
+                        >
+                                    Welcome: 
+                                    dog.gmail.com
+                        </p>
+            </div>
             <Connect(DropDown) />
 </header>,
+          false,
           <withRouter(Connect(Component)) />,
         ],
         "className": "App",
@@ -266,12 +347,23 @@ ShallowWrapper {
 >
                 View Favorites
 </NavLink>,
-              <button
-                className="logout-button"
-                onClick={[Function]}
+              <div
+                className="logout-welcome"
 >
-                Logout
-</button>,
+                <button
+                                className="logout-button"
+                                onClick={[Function]}
+                >
+                                Logout
+                </button>
+                <p
+                                className="user-email"
+                >
+                                Welcome: 
+                                dog.gmail.com
+                </p>
+</div>,
+              false,
               false,
               <Connect(DropDown) />,
             ],
@@ -334,14 +426,59 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Logout",
-                "className": "logout-button",
-                "onClick": [Function],
+                "children": Array [
+                  <button
+                    className="logout-button"
+                    onClick={[Function]}
+>
+                    Logout
+</button>,
+                  <p
+                    className="user-email"
+>
+                    Welcome: 
+                    dog.gmail.com
+</p>,
+                ],
+                "className": "logout-welcome",
               },
               "ref": null,
-              "rendered": "Logout",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Logout",
+                    "className": "logout-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Logout",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Welcome: ",
+                      "dog.gmail.com",
+                    ],
+                    "className": "user-email",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Welcome: ",
+                    "dog.gmail.com",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
             },
+            false,
             false,
             Object {
               "instance": null,
@@ -355,6 +492,7 @@ ShallowWrapper {
           ],
           "type": "header",
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,

@@ -60,3 +60,26 @@
   color: red;
 }
 
+@media only screen and (max-width: 500px) {
+  .signup-component {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .signup-component {
+    width: 300px;
+  }
+  .signup-field {
+    width: 250px;
+    height: 30px;
+    font-size: 24px;
+  }
+  .signup-comment {
+    font-size: 1.8em;
+  }
+  .signup-field::-webkit-input-placeholder {
+    font-size: 32px;
+  }
+}
+

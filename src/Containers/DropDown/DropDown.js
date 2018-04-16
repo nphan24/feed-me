@@ -3,6 +3,7 @@ import './DropDown.css';
 import { fetchRandomRecipes } from '../../Api/ApiCalls/fetchRandomRecipes';
 import { connect } from 'react-redux';
 import * as Actions from '../../Actions';
+import PropTypes from 'prop-types';
 export class DropDown extends Component {
 
   handleChange = async (event) => {
@@ -12,20 +13,22 @@ export class DropDown extends Component {
 
   render() {
     return <div>
-      <select id="dropdown" onChange=
-        {this.handleChange}>
+      <select id="dropdown" 
+        onChange={this.handleChange}
+        className='dropdown-menu'>
         <option value="Categories">Categories</option>
-        <option value="breakfast">breakfast</option>
-        <option value="lunch">lunch</option>
-        <option value="dinner">dinner</option>
-        <option value="appetizer">appetizer</option>
-        <option value="chicken">chicken</option>
-        <option value="beef">beef</option>
-        <option value="lamb">lamb</option>
-        <option value="seafood">seafood</option>
-        <option value="pork">pork</option>
-        <option value="smoothies">smoothies</option>
-        <option value="snacks">snacks</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="appetizer">Appetizer</option>
+        <option value="chicken">Chicken</option>
+        <option value="beef">Beef</option>
+        <option value="lamb">Lamb</option>
+        <option value="seafood">Seafood</option>
+        <option value="pork">Pork</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="smoothies">Smoothies</option>
+        <option value="snacks">Snacks</option>
       </select>
     </div>;
   }
@@ -34,5 +37,9 @@ export class DropDown extends Component {
 export const mapDispatchToProps = dispatch => ({
   replaceRecipes: recipes => dispatch(Actions.replaceRecipes(recipes))
 });
+
+DropDown.propTypes = {
+  replaceRecipes: PropTypes.func
+};
 
 export default (connect(null, mapDispatchToProps)(DropDown));

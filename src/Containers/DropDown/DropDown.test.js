@@ -18,13 +18,16 @@ describe('DropDown', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call fetchRandomRecipes on handleChange', () => {
-    // expect(fetchRandomRecipes).toHaveBeenCalled();
+  it('should call fetchRandomRecipes on handleChange', async () => {
+    const mockEvent = {target:{value:'chicken'}};
+    wrapper.instance().handleChange(mockEvent);
+    await expect(fetchRandomRecipes).toHaveBeenCalled();
   });
 
   it('should call replaceRecipes on handleChange', () => {
-    // wrapper.instance().handleChange();
-    // expect(mockreplaceRecipes).toHaveBeenCalled();
+    const mockEvent = { target: { value: 'chicken' } };
+    wrapper.instance().handleChange(mockEvent);
+    expect(mockreplaceRecipes).toHaveBeenCalled();
   });
 });
 

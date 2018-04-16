@@ -13,12 +13,16 @@ describe('App', () => {
   let mocklogoutUser = jest.fn();
   let mockUser = {email:'dog.gmail.com', uid: 24};
   let mockHistory = {push: jest.fn()};
+  let mockPromptSignIn = jest.fn();
+  let mockError = 'Please sign in to view Favorites';
 
   beforeEach (() => {
     wrapper = shallow(<App 
       postRecipes={mockpostRecipes} 
       logoutUser={mocklogoutUser}
+      promptSignIn={mockPromptSignIn}
       user={mockUser}
+      error={mockError}
       history={mockHistory}
     />, {
       disableLifecycleMethods: false
@@ -51,6 +55,11 @@ describe('App', () => {
   it('should call logoutUser on handleLogout', () => {
     expect(mocklogoutUser).toHaveBeenCalled();
   });
+
+  it('should call prompSignIn on handleFavorites', () => {
+    wrapper.instance().handleFavorites();
+    expect(mockPromptSignIn).toHaveBeenCalledWith(mockError);
+  });
 });
 
 describe('mapStateToProps', () => {
@@ -69,6 +78,24 @@ describe('mapDispatchToProps', () => {
     const expected = Actions.postRecipes(recipe);
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.postRecipes(recipe);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call dispatch with the correct params in logoutUser', () => {
+    const mockDispatch = jest.fn();
+    const user = mock.mockUser;
+    const expected = Actions.logoutUser(user);
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.logoutUser(user);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call dispatch with the correct params in PromptSignIn', () => {
+    const mockDispatch = jest.fn();
+    const error = 'error';
+    const expected = Actions.promptSignIn(error);
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.promptSignIn(error);
     expect(mockDispatch).toHaveBeenCalledWith(expected);
   });
 });

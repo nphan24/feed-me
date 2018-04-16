@@ -6,6 +6,7 @@ import { auth } from '../../firebase';
 import * as Actions from '../../Actions';
 import PropTypes from 'prop-types';
 import './SignUp.css';
+
 export class SignUp extends Component {
   constructor() {
     super();

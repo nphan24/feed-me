@@ -2,7 +2,7 @@
 
 .App-header {
   background-color: #2f97ef;
-  height: 120px;
+  height: 130px;
   padding: 20px;
   color: white;
 }
@@ -13,6 +13,7 @@
   visibility: center;
   font-family: 'PT Serif',
   serif;
+  display: block;
 }
 
 .top-icon {
@@ -36,7 +37,6 @@
 .view-favorites-button {
   color: white;
   text-decoration: none;
-  margin: 5px;
   text-align: right;
   display: block;
   font-size: 1.5em;
@@ -50,14 +50,47 @@
 
 .logout-button {
   border: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'PT Serif',
   serif;
   color: white;
   background-color: #2f97ef;
-  float: right;
+  margin-left: 145px;
+  margin-bottom: 5px;
 }
 
 .logout-button:hover {
   color: #E1DCDC;
+}
+
+.favorites-button-not-signedin {
+  color: white;
+  border: none;
+  background-color : #2f97ef;
+  text-align: right;
+  display: block;
+  font-size: 1.5em;
+  font-family: 'PT Serif',
+  serif;
+}
+
+.favorites-button-not-signedin:hover {
+  color: #E1DCDC;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'PT Serif',
+  serif;
+  margin: 0;
+}
+
+.user-email {
+  margin: 0;
+}
+
+.logout-welcome {
+  float: right;
+  font-size: 1.2em;
 }

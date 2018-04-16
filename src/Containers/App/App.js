@@ -23,6 +23,11 @@ export class App extends Component {
     this.props.logoutUser();
   }
 
+  handleFavorites = () => {
+    const error = 'Please sign in to view Favorites';
+    this.props.promptSignIn(error);
+  }
+
   render() {
     return (
       <div className="App">
@@ -33,18 +38,30 @@ export class App extends Component {
             <img src={topIcon} className="top-icon"/>
             Feed-Me
           </NavLink>
+          {this.props.user.email &&
           <NavLink 
             className="view-favorites-button" to="/favorites">
             View Favorites
           </NavLink>
+          }
           {this.props.user.email && 
-          <button  className="logout-button" 
-            onClick={this.handleLogout}>
-            Logout
-          </button>}
+          <div className='logout-welcome'>
+            <button  className="logout-button" 
+              onClick={this.handleLogout}>Logout
+            </button>
+            <p className='user-email'>Welcome: {this.props.user.email}</p>
+          </div>}
+          {!this.props.user.email &&
+          <button 
+            onClick={this.handleFavorites}
+            className='favorites-button-not-signedin'>
+            View Favorites</button>}
           {!this.props.user.email && <Nav />}
           <DropDown />
         </header>
+        {this.props.error && 
+          !this.props.user.email && 
+          <p className='error-message'>{this.props.error}</p>}
         <CardContainer />
       </div>
     );
@@ -52,19 +69,27 @@ export class App extends Component {
 }
 
 export const mapStateToProps = state => ({
-  user: state.user
+  user: state.user,
+  error: state.error
 });
 
 export const mapDispatchToProps = dispatch => ({
   postRecipes: recipes => dispatch(Actions.postRecipes(recipes)),
-  logoutUser: user => dispatch(Actions.logoutUser(user))
+  logoutUser: user => dispatch(Actions.logoutUser(user)),
+  promptSignIn: error => dispatch(Actions.promptSignIn(error))
 });
 
 App.propTypes = {
   postRecipes: PropTypes.func,
   history: PropTypes.object,
   logoutUser: PropTypes.func,
-  user: PropTypes.object
+  user: PropTypes.object,
+  promptSignIn: PropTypes.func,
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+    PropTypes.object
+  ])
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

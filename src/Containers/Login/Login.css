@@ -60,5 +60,29 @@
   color: red;
 }
 
+@media only screen and (max-width: 500px) {
+  .login-component {
+    width: 380px;
+  }
+}
 
+@media only screen and (max-width: 400px) {
+  .login-component {
+    width: 300px;
+  }
+
+  .input-field {
+    width: 250px;
+    height: 30px;
+    font-size: 24px;
+  }
+
+  .login-comment {
+    font-size: 1.8em;
+  }
+
+  .input-field::-webkit-input-placeholder {
+    font-size: 32px;
+  }
+}
 
