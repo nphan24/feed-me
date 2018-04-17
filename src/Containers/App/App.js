@@ -14,6 +14,7 @@ const topIcon = require('../../assets/top-icon.svg');
 export class App extends Component {
   async componentDidMount() {
     const recipes = await fetchRandomRecipes();
+    
     this.props.postRecipes(recipes);
   }
 

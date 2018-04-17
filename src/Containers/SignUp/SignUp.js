@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { NavLink, withRouter } from 'react-router-dom';
-import { auth } from '../../firebase';
+import { auth, db } from '../../firebase';
 import * as Actions from '../../Actions';
 import PropTypes from 'prop-types';
 import './SignUp.css';
@@ -35,11 +35,14 @@ export class SignUp extends Component {
 
     try {
       const authUser = await auth.signUp(email, passwordOne);
+
+      await db.doCreateUser(authUser.uid, username, email);
       const user = {
         username,
         email: authUser.email,
         uid: authUser.uid
       };
+
       this.props.addUser(user);
       this.setState({
         username: '',
