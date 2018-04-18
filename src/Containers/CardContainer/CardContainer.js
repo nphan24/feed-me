@@ -67,7 +67,9 @@ export const CardContainer = props => {
       <Route exact path={routes.LOGIN} component={Login} />
       <Route exact path={routes.SIGN_UP} component={SignUp} />
     </Switch>
+    {props.location.pathname === '/' &&
     <PageChange />
+    }
   </section>;
 };
 
