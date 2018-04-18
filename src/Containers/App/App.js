@@ -14,6 +14,10 @@ const topIcon = require('../../assets/top-icon.svg');
 export class App extends Component {
   async componentDidMount() {
     const recipes = await fetchRandomRecipes();
+    // const recipes = [
+    //   {name:'', totaltime: 20, source: '', image: ''}
+    // ];
+
     this.props.postRecipes(recipes);
   }
 
@@ -35,7 +39,10 @@ export class App extends Component {
           <NavLink 
             to="/" 
             className="App-title">
-            <img src={topIcon} className="top-icon"/>
+            <img src={topIcon} 
+              className="top-icon"
+              alt='feed me icon'
+            />
             Feed-Me
           </NavLink>
           {this.props.user.email &&

@@ -2,13 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as Actions from '../../Actions/';
 import PropTypes from 'prop-types';
+import { db } from '../../firebase';
 import './Card.css';
 
 export const Card = ({
   recipe, 
   favorites, 
   addFavorite,
-  removeFavorite 
+  removeFavorite,
+  user 
 }) => {
   const { name, image, totaltime, source } = recipe;
   const cardClass = 
@@ -17,8 +19,10 @@ export const Card = ({
   const toggleFavorite = (recipe) => {
     if (!favorites.find(fav => fav.id === recipe.id)) {
       addFavorite(recipe);
+      // db.addFavoriteToDB(user.uid, recipe );
     } else {
       removeFavorite(recipe.id);
+      // db.removeFavoriteFromDB(user.id, recipe.id);
     }
   };
 
@@ -44,7 +48,8 @@ export const Card = ({
 };
 
 export const mapStateToProps = state => ({ 
-  favorites: state.favorites 
+  favorites: state.favorites,
+  user : state.user
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -56,7 +61,8 @@ Card.propTypes = {
   removeFavorite: PropTypes.func,
   addFavorite: PropTypes.func,
   favorites: PropTypes.array,
-  recipe: PropTypes.object
+  recipe: PropTypes.object,
+  user: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

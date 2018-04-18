@@ -7,11 +7,13 @@ import './CardContainer.css';
 import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp';
 import PropTypes from 'prop-types';
+import PageChange from '../PageChange/PageChange';
 
 const loading = require('../../assets/loading.gif');
 const noFavorites = require('../../assets/favorites.gif');
 
 export const CardContainer = props => {
+
   const cardType = 
     props.location.pathname === '/favorites' ? 'favorites': 'recipes';
 
@@ -44,19 +46,28 @@ export const CardContainer = props => {
     });
   }
 
-  return <section className='card-container-section'>
+  return <section className="card-container-section">
     <Switch>
-      <Route exact path="/" render={() => {
-        return <div className="card-container">{renderCards}</div>;
-      }} />
-      <Route exact path="/favorites" render={() => {
-        return (
-          <div className="card-container">{renderCards}</div>
-        );
-      }} />
+      <Route 
+        exact path="/" 
+        render={() => {
+          return (
+            <div className="card-container">
+              {renderCards}
+            </div>);
+        }}/>
+      <Route 
+        exact path="/favorites" 
+        render={() => {
+          return (
+            <div className="card-container">
+              {renderCards}
+            </div>);
+        }} />
       <Route exact path={routes.LOGIN} component={Login} />
       <Route exact path={routes.SIGN_UP} component={SignUp} />
     </Switch>
+    <PageChange />
   </section>;
 };
 

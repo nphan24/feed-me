@@ -17,7 +17,7 @@ describe('fetchRandomRecipes', () => {
   });
 
   it('should call fetch with the correct params', () => {
-    const url = `http://api.yummly.com/v1/api/recipes?_app_id=${applicationId}&_app_key=${apiKey}&q=chicken&maxResult=30&start=00`;
+    const url = `http://api.yummly.com/v1/api/recipes?_app_id=${applicationId}&_app_key=${apiKey}&q=chicken&maxResult=30&start=0`;
     const mockSelected = 'chicken';
     fetchRandomRecipes(mockSelected);
     expect(window.fetch).toHaveBeenCalledWith(url);
