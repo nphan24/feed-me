@@ -66,7 +66,7 @@ ShallowWrapper {
                     path="/signup"
           />
 </Switch>,
-        <Connect(PageChange) />,
+        false,
       ],
       "className": "card-container-section",
     },
@@ -157,15 +157,7 @@ ShallowWrapper {
         ],
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
     ],
     "type": "section",
   },
@@ -198,7 +190,7 @@ ShallowWrapper {
                         path="/signup"
             />
 </Switch>,
-          <Connect(PageChange) />,
+          false,
         ],
         "className": "card-container-section",
       },
@@ -289,15 +281,7 @@ ShallowWrapper {
           ],
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
       ],
       "type": "section",
     },
